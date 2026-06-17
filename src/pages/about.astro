@@ -1,0 +1,479 @@
+---
+// about.astro - About page
+import Base from '../layouts/Base.astro';
+import CTA from '../components/CTA.astro';
+import businessData from '../data/business.json';
+
+const business = businessData.business;
+---
+
+<Base
+  title="About MacBryte & Rahul"
+  description="Learn about Rahul, the founder and lead coach at MacBryte. Over 800 hours of one-on-one technology coaching for seniors and beginners in Ottawa."
+  schemaType="Person"
+/>
+  <header class="page-header">
+    <div class="container">
+      <h1>About MacBryte &amp; Rahul</h1>
+      <p class="page-subtitle">Hi, I'm Rahul — the coach behind MacBryte</p>
+    </div>
+  </header>
+
+  <main class="container about-content">
+    <article class="about-main">
+      <section class="about-section" aria-labelledby="story-heading">
+        <h2 id="story-heading">My Story</h2>
+        <p>
+          I've spent <strong>over 800 hours</strong> helping <strong>75+ students</strong> gain confidence with technology. 
+          What started as helping my own parents use their iPad to video call family turned into a passion for making 
+          technology accessible to everyone — especially seniors who've been left behind by the digital shift.
+        </p>
+        <p>
+          Before MacBryte, I worked in <strong>technology consulting and training</strong> — translating complex systems 
+          for non-technical stakeholders. I realized the same skills that help executives understand software could help 
+          my mom understand her iPad.
+        </p>
+        <p>
+          The methods are the same: <strong>listen first, simplify without dumbing down, build confidence through small wins.</strong>
+        </p>
+      </section>
+
+      <section class="about-section" aria-labelledby="approach-heading">
+        <h2 id="approach-heading">My Approach</h2>
+        <p class="approach-tagline"><strong>No jargon. No judgment. Your pace.</strong></p>
+        <p>
+          Every student comes with different experiences, fears, and goals. Some have never sent an email. 
+          Others want to master online banking. A few just want to see their grandkids on FaceTime. 
+          I meet you exactly where you are.
+        </p>
+        <ul class="approach-list">
+          <li><strong>One-on-one only</strong> — no group classes, no rushing</li>
+          <li><strong>Your device, your home</strong> — learn on the equipment you actually use</li>
+          <li><strong>Written notes after every session</strong> — practice between lessons with confidence</li>
+          <li><strong>Questions between sessions welcome</strong> — text or email me anytime</li>
+        </ul>
+      </section>
+
+      <section class="about-section" aria-labelledby="specialties-heading">
+        <h2 id="specialties-heading">What I Specialize In</h2>
+        <div class="specialties-grid">
+          <article class="specialty-card">
+            <div class="specialty-icon" aria-hidden="true">📱</div>
+            <h3>iPad &amp; iPhone</h3>
+            <p>FaceTime, Messages, Photos, Apps, Accessibility, iCloud</p>
+          </article>
+          <article class="specialty-card">
+            <div class="specialty-icon" aria-hidden="true">💻</div>
+            <h3>Computer Basics (Mac &amp; Windows)</h3>
+            <p>Files, email, browser, updates, backups, organization</p>
+          </article>
+          <article class="specialty-card">
+            <div class="specialty-icon" aria-hidden="true">🔒</div>
+            <h3>Online Safety &amp; Banking</h3>
+            <p>Scam recognition, 2FA, secure passwords, bill pay, shopping</p>
+          </article>
+          <article class="specialty-card">
+            <div class="specialty-icon" aria-hidden="true">📄</div>
+            <h3>Office Apps</h3>
+            <p>Word, Excel, PowerPoint for letters, budgets, presentations</p>
+          </article>
+          <article class="specialty-card">
+            <div class="specialty-icon" aria-hidden="true">📚</div>
+            <h3>Digital Legacy</h3>
+            <p>Photo organization, password managers, account recovery planning</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="about-section" aria-labelledby="credentials-heading">
+        <h2 id="credentials-heading">Credentials &amp; Experience</h2>
+        <ul class="credentials-list">
+          <li><strong>800+ hours</strong> one-on-one technology coaching for seniors (since 2022)</li>
+          <li><strong>75+ students</strong> across Ottawa, Barrhaven, Nepean, Kanata</li>
+          <li><strong>4.9★ average rating</strong> from students and families</li>
+          <li><strong>Apple ecosystem expertise</strong> — iPhone, iPad, Mac, iCloud, continuity</li>
+          <li><strong>Windows 10/11 proficiency</strong> — file management, security, accessibility</li>
+          <li><strong>Assistive technology configuration</strong> — VoiceOver, Zoom, Switch Control, hearing aid pairing</li>
+        </ul>
+      </section>
+
+      <section class="about-section" aria-labelledby="why-macbryte-heading">
+        <h2 id="why-macbryte-heading">Why "MacBryte"?</h2>
+        <div class="name-origin">
+          <div class="name-part">
+            <span class="name-label">Mac</span>
+            <span class="name-desc">— where I started (Apple ecosystem)</span>
+          </div>
+          <div class="name-part">
+            <span class="name-label">Bryte</span>
+            <span class="name-desc">— bright, illuminating, making things clear</span>
+          </div>
+        </div>
+        <p class="name-tagline">Together: <em>making technology bright and clear for you.</em></p>
+      </section>
+    </article>
+
+    <aside class="about-sidebar">
+      <div class="sidebar-card profile-card">
+        <div class="profile-avatar" aria-hidden="true">
+          <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="60" cy="60" r="60" fill="#fef3c7"/>
+            <circle cx="60" cy="45" r="20" fill="#fde68a"/>
+            <ellipse cx="60" cy="95" rx="30" ry="35" fill="#fde68a"/>
+            <ellipse cx="50" cy="38" rx="6" ry="7" fill="#1e40af" opacity="0.3"/>
+            <ellipse cx="70" cy="38" rx="6" ry="7" fill="#1e40af" opacity="0.3"/>
+            <path d="M50 55 Q60 62 70 55" stroke="#1e40af" stroke-width="3" fill="none" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="profile-info">
+          <h2>Rahul</h2>
+          <p class="profile-title">Founder &amp; Senior Technology Coach</p>
+          <p class="profile-location">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Ottawa, ON
+          </p>
+        </div>
+        
+        <div class="profile-stats">
+          <div class="stat">
+            <span class="stat-number">800+</span>
+            <span class="stat-label">Hours Teaching</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">75+</span>
+            <span class="stat-label">Students Helped</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">4.9★</span>
+            <span class="stat-label">Average Rating</span>
+          </div>
+        </div>
+
+        <CTA variant="secondary" title="Let's Chat" description="Free 15-minute consultation — by phone or Zoom." buttonText="Book Free Consultation" />
+      </div>
+    </aside>
+  </main>
+
+  <section class="testimonials-full" aria-labelledby="testimonials-heading">
+    <div class="container">
+      <header class="section-header">
+        <h2 id="testimonials-heading">What Students &amp; Families Say</h2>
+      </header>
+      
+      <div class="testimonials-grid-full">
+        <blockquote class="testimonial-card-full">
+          <p>"Rahul is incredibly patient and explains everything clearly. He helped my mother learn to use her iPad to video call us. We're so grateful."</p>
+          <footer>
+            <cite>— Sarah M.</cite>
+            <span>Ottawa (daughter of student)</span>
+          </footer>
+        </blockquote>
+        <blockquote class="testimonial-card-full">
+          <p>"I went from being afraid of my computer to sending emails and shopping online. Rahul made it fun and easy. Highly recommend!"</p>
+          <footer>
+            <cite>— David T.</cite>
+            <span>Barrhaven</span>
+          </footer>
+        </blockquote>
+        <blockquote class="testimonial-card-full">
+          <p>"My father-in-law (82) wanted to organize 50 years of family photos. Rahul taught him Albums and iCloud. Now the whole family has access. Worth every penny."</p>
+          <footer>
+            <cite>— Jennifer K.</cite>
+            <span>Nepean</span>
+          </footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <CTA variant="primary" />
+</Base>
+
+<style>
+  .page-header {
+    padding: 4rem 0 2rem;
+    background: linear-gradient(180deg, var(--color-primary-light, #eff6ff) 0%, white 100%);
+    text-align: center;
+  }
+
+  .page-header h1 {
+    margin-bottom: 0.5rem;
+  }
+
+  .page-subtitle {
+    font-size: 1.25rem;
+    color: var(--color-gray-600, #4b5563);
+    margin: 0;
+  }
+
+  .about-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    padding: 3rem 0;
+  }
+
+  @media (min-width: 1024px) {
+    .about-content {
+      grid-template-columns: 1fr 320px;
+    }
+  }
+
+  .about-section {
+    margin-bottom: 3rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid var(--color-border, #e5e7eb);
+  }
+
+  .about-section:last-of-type {
+    border-bottom: none;
+  }
+
+  .approach-tagline {
+    font-size: 1.25rem;
+    color: var(--color-primary, #1e40af);
+    margin-bottom: 1rem;
+  }
+
+  .approach-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .approach-list li {
+    background: white;
+    border: 1px solid var(--color-border, #e5e7eb);
+    border-radius: 12px;
+    padding: 1.5rem;
+    font-size: 1.0625rem;
+  }
+
+  .specialties-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  @media (min-width: 640px) {
+    .specialties-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (min-width: 1024px) {
+    .specialties-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  .specialty-card {
+    background: white;
+    border: 1px solid var(--color-border, #e5e7eb);
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .specialty-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  }
+
+  .specialty-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .specialty-card h3 {
+    margin: 0 0 0.5rem;
+  }
+
+  .specialty-card p {
+    color: var(--color-gray-600, #4b5563);
+    margin: 0;
+    font-size: 0.9375rem;
+  }
+
+  .credentials-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .credentials-list li {
+    background: white;
+    border: 1px solid var(--color-border, #e5e7eb);
+    border-radius: 12px;
+    padding: 1.5rem;
+    font-size: 1.0625rem;
+  }
+
+  .name-origin {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 2rem 0;
+  }
+
+  @media (min-width: 640px) {
+    .name-origin { flex-direction: row; }
+  }
+
+  .name-part {
+    flex: 1;
+    background: var(--color-primary-light, #eff6ff);
+    border: 1px solid var(--color-primary, #1e40af);
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+  }
+
+  .name-label {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-primary, #1e40af);
+    margin-bottom: 0.5rem;
+  }
+
+  .name-desc {
+    color: var(--color-gray-600, #4b5563);
+  }
+
+  .name-tagline {
+    text-align: center;
+    font-size: 1.125rem;
+    color: var(--color-gray-600, #4b5563);
+  }
+
+  .about-sidebar {
+    position: sticky;
+    top: 100px;
+    align-self: start;
+  }
+
+  .profile-card {
+    background: white;
+    border: 1px solid var(--color-border, #e5e7eb);
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .profile-avatar {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 1.5rem;
+  }
+
+  .profile-avatar svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .profile-info h2 {
+    margin: 0 0 0.25rem;
+  }
+
+  .profile-title {
+    color: var(--color-primary, #1e40af);
+    font-weight: 600;
+    margin: 0 0 0.5rem;
+  }
+
+  .profile-location {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    color: var(--color-gray-500, #6b7280);
+    font-size: 0.875rem;
+    margin: 0;
+  }
+
+  .profile-location svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .profile-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin: 1.5rem 0;
+    padding: 1.5rem 0;
+    border-top: 1px solid var(--color-border, #e5e7eb);
+    border-bottom: 1px solid var(--color-border, #e5e7eb);
+  }
+
+  .profile-stats .stat {
+    text-align: center;
+  }
+
+  .profile-stats .stat-number {
+    display: block;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--color-primary, #1e40af);
+    line-height: 1;
+  }
+
+  .profile-stats .stat-label {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--color-gray-500, #6b7280);
+    margin-top: 0.25rem;
+  }
+
+  .testimonials-full {
+    background: var(--color-gray-100, #f3f4f6);
+    padding: 4rem 0;
+  }
+
+  .testimonials-grid-full {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  @media (min-width: 768px) {
+    .testimonials-grid-full { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (min-width: 1024px) {
+    .testimonials-grid-full { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  .testimonial-card-full {
+    background: white;
+    border: 1px solid var(--color-border, #e5e7eb);
+    border-radius: 16px;
+    padding: 2rem;
+  }
+
+  .testimonial-card-full p {
+    font-size: 1.0625rem;
+    font-style: italic;
+    margin-bottom: 1.5rem;
+  }
+
+  .testimonial-card-full footer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .testimonial-card-full cite {
+    font-style: normal;
+    font-weight: 600;
+    color: var(--color-text, #1f2937);
+  }
+
+  .testimonial-card-full span {
+    font-size: 0.875rem;
+    color: var(--color-gray-500, #6b7280);
+  }
+</style>

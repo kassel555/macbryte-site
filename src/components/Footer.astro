@@ -1,0 +1,273 @@
+---
+// Footer.astro
+const businessData = await import('../data/business.json');
+const { name, url, telephone, email, address, cta, openingHours, areaServed, sameAs } = businessData.business;
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="footer" role="contentinfo">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a href="/" class="footer-logo" aria-label={`${name} - Home`}>
+        <svg class="logo-icon" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <rect width="32" height="32" rx="8" fill="currentColor"/>
+          <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" font-size="16" font-weight="bold" fill="white">M</text>
+        </svg>
+        <span>{name}</span>
+      </a>
+      <p class="footer-tagline">Personalized technology coaching for seniors and beginners in Ottawa, Barrhaven, Nepean, and Kanata.</p>
+      <div class="footer-social">
+        {sameAs.map((socialUrl: string) => (
+          <a href={socialUrl} class="social-link" target="_blank" rel="noopener noreferrer" aria-label={socialUrl.includes('facebook') ? 'Facebook' : 'LinkedIn'}>
+            {socialUrl.includes('facebook') ? (
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            ) : (
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 21h-3v-6h-4v6H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2zm-4-12V7h3v6h-3zM8 7v10H5V7h3zM6.5 5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg>
+            )}
+          </a>
+        ))}
+      </div>
+    </div>
+
+    <nav class="footer-nav" aria-label="Footer navigation">
+      <div class="footer-section">
+        <h3 class="footer-heading">Services</h3>
+        <ul class="footer-links">
+          <li><a href="/services/ipad-iphone-coaching">iPad & iPhone Coaching</a></li>
+          <li><a href="/services/computer-basics">Computer Basics</a></li>
+          <li><a href="/services/email-internet-safety">Email & Internet Safety</a></li>
+          <li><a href="/services/office-apps">Word, Excel & PowerPoint</a></li>
+          <li><a href="/services/online-banking-shopping">Online Banking & Shopping</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3 class="footer-heading">Guides</h3>
+        <ul class="footer-links">
+          <li><a href="/guides/how-to-setup-facetime-ipad-seniors">FaceTime Setup for Seniors</a></li>
+          <li><a href="/guides/spot-phishing-scams-seniors">Spotting Phishing Scams</a></li>
+          <li><a href="/guides/ipad-accessibility-seniors">iPad Accessibility Settings</a></li>
+          <li><a href="/guides/icloud-photos-explained">Organize Photos with iCloud</a></li>
+          <li><a href="/guides/best-ipad-for-seniors">Best iPad for Seniors 2025</a></li>
+          <li><a href="/guides/password-manager-seniors">Bitwarden Password Manager</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3 class="footer-heading">Company</h3>
+        <ul class="footer-links">
+          <li><a href="/about">About Rahul & MacBryte</a></li>
+          <li><a href="/contact">Contact & Booking</a></li>
+          <li><a href="/services">All Services</a></li>
+          <li><a href="/guides">All Guides</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3 class="footer-heading">Contact</h3>
+        <address class="footer-contact">
+          <p><strong>Phone:</strong> <a href={`tel:${telephone}`}>{telephone.replace('+1-', '')}</a></p>
+          <p><strong>Email:</strong> <a href={`mailto:${email}`}>{email}</a></p>
+          <p><strong>Service Area:</strong> Ottawa, Barrhaven, Nepean, Kanata</p>
+          <p><strong>Hours:</strong> Mon–Fri 9am–7pm, Sat 10am–4pm</p>
+        </address>
+      </div>
+    </nav>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container footer-bottom-inner">
+      <p class="copyright">&copy; {currentYear} {name}. All rights reserved.</p>
+      <p class="tagline">Patient, personalized tech coaching for seniors. <a href="/contact">Book your free consultation</a>.</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background: var(--color-gray-900, #111827);
+    color: var(--color-gray-300, #d1d5db);
+    padding: 4rem 0 0;
+    font-size: 0.9375rem;
+    line-height: 1.7;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem 3rem;
+  }
+
+  @media (min-width: 640px) {
+    .footer-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .footer-grid {
+      grid-template-columns: 1.5fr 2fr 1fr 1.5fr;
+    }
+  }
+
+  .footer-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .footer-logo .logo-icon {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+  }
+
+  .footer-tagline {
+    color: var(--color-gray-400, #9ca3af);
+    margin: 0 0 1.5rem;
+    max-width: 280px;
+  }
+
+  .footer-social {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    color: var(--color-gray-400, #9ca3af);
+    background: var(--color-gray-800, #1f2937);
+    border-radius: 50%;
+    transition: color 0.2s, background 0.2s;
+  }
+
+  .social-link:hover {
+    color: white;
+    background: var(--color-primary, #1e40af);
+  }
+
+  .social-link svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .footer-nav {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  @media (min-width: 640px) {
+    .footer-nav {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .footer-nav {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  .footer-heading {
+    color: white;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 0 0 1rem;
+  }
+
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .footer-links a {
+    color: var(--color-gray-300, #d1d5db);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .footer-links a:hover {
+    color: var(--color-primary-light, #93c5fd);
+  }
+
+  .footer-contact {
+    font-style: normal;
+    color: var(--color-gray-300, #d1d5db);
+    margin: 0;
+  }
+
+  .footer-contact p {
+    margin: 0 0 0.5rem;
+  }
+
+  .footer-contact a {
+    color: var(--color-gray-300, #d1d5db);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .footer-contact a:hover {
+    color: var(--color-primary-light, #93c5fd);
+  }
+
+  .footer-bottom {
+    border-top: 1px solid var(--color-gray-800, #1f2937);
+    padding: 1.5rem 0;
+  }
+
+  .footer-bottom-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  @media (min-width: 640px) {
+    .footer-bottom-inner {
+      flex-direction: row;
+      justify-content: space-between;
+      text-align: left;
+    }
+  }
+
+  .copyright {
+    color: var(--color-gray-500, #6b7280);
+    font-size: 0.875rem;
+    margin: 0;
+  }
+
+  .tagline {
+    color: var(--color-gray-500, #6b7280);
+    font-size: 0.875rem;
+    margin: 0;
+  }
+
+  .tagline a {
+    color: var(--color-primary-light, #93c5fd);
+    text-decoration: none;
+  }
+
+  .tagline a:hover {
+    text-decoration: underline;
+  }
+</style>

@@ -1,0 +1,589 @@
+---
+// Schema.astro - Injects JSON-LD structured data based on page type
+import businessData from '../data/business.json';
+
+interface Props {
+  type: 'LocalBusiness' | 'Service' | 'Person' | 'HowTo' | 'FAQPage' | 'BreadcrumbList' | 'WebSite';
+  data?: Record<string, any>;
+  serviceId?: string;
+  guideId?: string;
+}
+
+const biz = businessData.business;
+
+function localBusinessSchema() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'LocalBusiness',
+    '@id': `${biz.url}#business`,
+    name: biz.name,
+    description: biz.description,
+    url: biz.url,
+    telephone: biz.telephone,
+    email: biz.email,
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: biz.address.addressLocality,
+      addressRegion: biz.address.addressRegion,
+      addressCountry: biz.address.addressCountry,
+    },
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: biz.geo?.latitude,
+      longitude: biz.geo?.longitude,
+    },
+    areaServed: (biz.areaServed || []).map((area: any) => ({
+      '@type': area.type,
+      name: area.name,
+    })),
+    priceRange: biz.priceRange,
+    currenciesAccepted: biz.currenciesAccepted,
+    paymentAccepted: biz.paymentAccepted,
+    openingHoursSpecification: (biz.openingHours || []).map((hours: any) => ({
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: hours.dayOfWeek,
+      opens: hours.opens,
+      closes: hours.closes,
+    })),
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'Computer Coaching Services',
+      itemListElement: (biz.services || []).map((svc: any, index: number) => ({
+        '@type': 'Offer',
+        position: index + 1,
+        itemOffered: {
+          '@type': 'Service',
+          '@id': `${biz.url}${svc.url}#service`,
+          name: svc.name,
+          description: svc.description,
+          provider: { '@id': `${biz.url}#business` },
+          areaServed: svc.areas,
+          serviceType: svc.serviceType,
+        },
+        price: svc.price,
+        priceCurrency: svc.priceCurrency,
+        priceSpecification: {
+          '@type': 'UnitPriceSpecification',
+          price: svc.price,
+          priceCurrency: svc.priceCurrency,
+          unitText: svc.unitText,
+        },
+      })),
+    },
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: biz.aggregateRating.ratingValue,
+      reviewCount: biz.aggregateRating.reviewCount,
+      bestRating: biz.aggregateRating.bestRating,
+      worstRating: biz.aggregateRating.worstRating,
+    },
+    review: (biz.reviews || []).map((review: any) => ({
+      '@type': 'Review',
+      author: { '@type': 'Person', name: review.author },
+      datePublished: review.datePublished,
+      reviewBody: review.reviewBody,
+      reviewRating: {
+        '@type': 'Rating',
+        ratingValue: review.ratingValue,
+        bestRating: '5',
+      },
+      publisher: { '@id': `${biz.url}#business` },
+    })),
+    sameAs: biz.sameAs,
+  };
+}
+
+function serviceSchema(serviceId: string) {
+  const svc = biz.services.find((s: any) => s.id === serviceId);
+  if (!svc) return null;
+
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    '@id': `${biz.url}${svc.url}#service`,
+    name: svc.name,
+    description: svc.description,
+    provider: { '@id': `${biz.url}#business` },
+    areaServed: (svc.areas || []).map((area: string) => ({
+      '@type': 'City',
+      name: area,
+    })),
+    serviceType: svc.serviceType,
+    offers: {
+      '@type': 'Offer',
+      price: svc.price,
+      priceCurrency: svc.priceCurrency,
+      priceSpecification: {
+        '@type': 'UnitPriceSpecification',
+        price: svc.price,
+        priceCurrency: svc.priceCurrency,
+        unitText: svc.unitText,
+      },
+    },
+  };
+}
+
+function personSchema() {
+  const founder = biz.founder;
+  return {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'Person',
+        '@id': `${biz.url}/about#person`,
+        name: founder.name,
+        alternateName: `${founder.name} MacBryte`,
+        description: founder.description,
+        url: `${biz.url}/about`,
+        image: founder.image,
+        sameAs: founder.sameAs,
+        jobTitle: founder.jobTitle,
+        worksFor: { '@id': `${biz.url}#business` },
+        knowsAbout: (founder.knowsAbout || []).map((topic: string) => topic),
+        credential: (founder.credentials || []).map((cred: any) => ({
+          '@type': 'EducationalOccupationalCredential',
+          name: cred.name,
+          description: cred.description,
+        })),
+        award: {
+          '@type': 'AggregateRating',
+          ratingValue: founder.award.ratingValue,
+          reviewCount: founder.award.reviewCount,
+          bestRating: founder.award.bestRating,
+          worstRating: founder.award.worstRating,
+          description: `Average rating from student and family reviews on Google and Facebook`,
+        },
+        address: {
+          '@type': 'PostalAddress',
+          addressLocality: biz.address.addressLocality,
+          addressRegion: biz.address.addressRegion,
+          addressCountry: biz.address.addressCountry,
+        },
+      },
+      {
+        '@type': 'AboutPage',
+        '@id': `${biz.url}/about#page`,
+        url: `${biz.url}/about`,
+        name: `About ${biz.name} & ${founder.name}`,
+        mainEntity: { '@id': `${biz.url}/about#person` },
+        publisher: { '@id': `${biz.url}#business` },
+      },
+    ],
+  };
+}
+
+function howToSchema(guideId: string) {
+  const guides: Record<string, any> = {
+    'how-to-setup-facetime-ipad-seniors': {
+      name: 'How to Set Up and Use FaceTime on iPad for Seniors',
+      description: 'Step-by-step guide to enable FaceTime, add contacts, and make your first video call on iPad. Written for seniors and beginners — no jargon, large screenshots, printable cheat sheet included.',
+      image: '/images/guides/facetime-ipad-hero.jpg',
+      totalTime: 'PT15M',
+      estimatedCost: { '@type': 'MonetaryAmount', currency: 'CAD', value: '0' },
+      supply: [
+        { '@type': 'HowToSupply', name: 'iPad', description: 'Any model with front camera (iPad 5th gen+, iPad Air 2+, iPad mini 4+, any iPad Pro)' },
+        { '@type': 'HowToSupply', name: 'Apple ID', description: 'Your Apple account email and password' },
+        { '@type': 'HowToSupply', name: 'Wi-Fi connection', description: 'FaceTime works over Wi-Fi only' },
+      ],
+      tool: [
+        { '@type': 'HowToTool', name: 'Settings app', description: 'Built-in iPad app (gear icon)' },
+        { '@type': 'HowToTool', name: 'Contacts app', description: 'Built-in iPad app (silhouette icon)' },
+        { '@type': 'HowToTool', name: 'FaceTime app', description: 'Built-in iPad app (green video camera icon)' },
+      ],
+      step: [
+        { '@type': 'HowToStep', position: 1, name: 'Create or Sign In with Your Apple ID', text: 'An Apple ID is your key to all Apple services.', itemListElement: [
+          { '@type': 'HowToDirection', text: 'Open Settings (gear icon on Home Screen)' },
+          { '@type': 'HowToDirection', text: 'Tap "Sign in to your iPad" at the top of the left sidebar' },
+          { '@type': 'HowToDirection', text: 'If you HAVE an Apple ID: enter your email and password, tap Next' },
+          { '@type': 'HowToDirection', text: "If you DON'T have an Apple ID: tap \"Don't have an Apple ID?\" -> \"Create Apple ID\" -> follow prompts" },
+        ]},
+        { '@type': 'HowToStep', position: 2, name: 'Turn On FaceTime', text: 'Enable the FaceTime service in Settings.', itemListElement: [
+          { '@type': 'HowToDirection', text: 'In Settings, scroll down and tap "FaceTime" (green video camera icon)' },
+          { '@type': 'HowToDirection', text: 'Toggle the "FaceTime" switch to ON (green)' },
+          { '@type': 'HowToDirection', text: 'Under "You Can Be Reached By FaceTime At", ensure your Apple ID email has a checkmark' },
+        ]},
+        { '@type': 'HowToStep', position: 3, name: 'Add Family & Friends to Contacts', text: 'FaceTime uses your Contacts app.', itemListElement: [
+          { '@type': 'HowToDirection', text: 'Open Contacts app (silhouette icon)' },
+          { '@type': 'HowToDirection', text: 'Tap the "+" button in the top-right corner' },
+          { '@type': 'HowToDirection', text: 'Enter: First Name, Last Name, Phone Number, Email Address (Apple ID email)' },
+          { '@type': 'HowToDirection', text: 'Tap "Add Photo" -> choose a clear picture -> Done' },
+        ]},
+        { '@type': 'HowToStep', position: 4, name: 'Make Your First FaceTime Call', text: 'Two ways to call — both work.', itemListElement: [
+          { '@type': 'HowToDirection', text: 'Method A — From Contacts: Open Contacts -> tap person\'s name -> tap green video camera icon' },
+          { '@type': 'HowToDirection', text: 'Method B — From FaceTime app: Open FaceTime -> tap "New FaceTime" -> type name -> tap video camera icon' },
+        ]},
+        { '@type': 'HowToStep', position: 5, name: 'Receive a FaceTime Call', text: 'Know what to do when someone calls you.', itemListElement: [
+          { '@type': 'HowToDirection', text: 'Incoming call: tap green video button to answer with video' },
+          { '@type': 'HowToDirection', text: 'If iPad locked: swipe right on green video slider' },
+          { '@type': 'HowToDirection', text: 'Missed call: notification appears -> tap to call back' },
+        ]},
+        { '@type': 'HowToStep', position: 6, name: 'Helpful Settings for Seniors', text: 'Adjust these once for a better experience.', itemListElement: [
+          { '@type': 'HowToDirection', text: 'Larger text: Settings -> Display & Brightness -> Text Size -> drag slider right' },
+          { '@type': 'HowToDirection', text: 'Speaker on by default: Settings -> FaceTime -> toggle "Speaker" ON' },
+          { '@type': 'HowToDirection', text: 'Silence unknown callers: Settings -> FaceTime -> toggle "Silence Unknown Callers" ON' },
+        ]},
+      ],
+      video: {
+        '@type': 'VideoObject',
+        name: 'FaceTime Setup for Seniors - Full Walkthrough',
+        description: 'Watch Rahul set up FaceTime step-by-step on an iPad. 3-minute narrated demo.',
+        thumbnailUrl: '/images/guides/facetime-video-thumb.jpg',
+        uploadDate: '2025-01-15',
+        duration: 'PT3M12S',
+        contentUrl: `${biz.url}/videos/facetime-setup-seniors.mp4`,
+        embedUrl: 'https://www.youtube.com/embed/XXXXXXXXXXX',
+      },
+    },
+    'spot-phishing-scams-seniors': {
+      name: 'How to Spot and Avoid Phishing Scams Targeting Seniors',
+      description: 'Step-by-step guide to recognize phishing emails, texts, and calls. Includes real examples, red-flag checklist, and printable cheat sheet.',
+      image: '/images/guides/phishing-hero.jpg',
+      totalTime: 'PT10M',
+      estimatedCost: { '@type': 'MonetaryAmount', currency: 'CAD', value: '0' },
+      supply: [
+        { '@type': 'HowToSupply', name: 'Email account / phone', description: 'Where you receive messages' },
+        { '@type': 'HowToSupply', name: 'Skepticism muscle', description: 'Your best defense — pause before you click' },
+      ],
+      tool: [
+        { '@type': 'HowToTool', name: 'Email provider spam reporting', description: 'Gmail: Report phishing button / Outlook: Junk -> Phishing' },
+        { '@type': 'HowToTool', name: 'Canadian Anti-Fraud Centre', description: 'Report scams: 1-888-495-8501' },
+      ],
+      step: [
+        { '@type': 'HowToStep', position: 1, name: 'Understand What Phishing Is', text: 'Phishing = fake messages pretending to be from trusted sources to steal your money or identity.' },
+        { '@type': 'HowToStep', position: 2, name: 'Learn the Universal Red Flags', text: 'Memorize these 5 signs — they appear in 95% of phishing attempts.', itemListElement: [
+          { '@type': 'HowToDirection', text: 'URGENCY / THREAT: "Immediate action required," "Account closes in 24 hours"' },
+          { '@type': 'HowToDirection', text: 'GENERIC GREETING: "Dear Customer," "Hello," — not your name' },
+          { '@type': 'HowToDirection', text: 'SENDER MISMATCH: Email says "RBC" but address is "security@rbc-alerts.xyz"' },
+          { '@type': 'HowToDirection', text: 'LINK MISMATCH: Text says "td.com" but hover shows "td-login.phishersite.com"' },
+          { '@type': 'HowToDirection', text: 'ASKS FOR SECRETS: Password, PIN, SIN, credit card, gift cards, crypto' },
+        ]},
+        { '@type': 'HowToStep', position: 3, name: 'Apply the 3-Second Rule Before Every Click', text: 'When a message triggers urgency, fear, or excitement — PAUSE. Count to 3. Ask: Was I expecting this? Red flags? Can I verify independently?' },
+        { '@type': 'HowToStep', position: 4, name: 'Verify Independently — The Golden Rule', text: 'NEVER use contact info IN the suspicious message. Always go to the source.', itemListElement: [
+          { '@type': 'HowToDirection', text: 'Bank: Call number on BACK of your debit/credit card' },
+          { '@type': 'HowToDirection', text: 'CRA: 1-800-959-8281' },
+          { '@type': 'HowToDirection', text: 'Family: Call them on their KNOWN number' },
+        ]},
+        { '@type': 'HowToStep', position: 5, name: 'Report & Delete — Protect Others', text: 'Reporting helps shut down scammers.', itemListElement: [
+          { '@type': 'HowToDirection', text: 'Email: Use "Report Phishing" button in Gmail, Outlook, Yahoo' },
+          { '@type': 'HowToDirection', text: 'Text: Forward to 7726 (SPAM)' },
+          { '@type': 'HowToDirection', text: 'Call: Hang up. Block. Report: 1-888-495-8501' },
+        ]},
+      ],
+      video: {
+        '@type': 'VideoObject',
+        name: 'Phishing Scam Recognition for Seniors',
+        description: 'Rahul walks through 5 real phishing examples and the 3-second rule. 4-minute demo.',
+        thumbnailUrl: '/images/guides/phishing-video-thumb.jpg',
+        uploadDate: '2025-01-20',
+        duration: 'PT4M',
+        contentUrl: `${biz.url}/videos/phishing-recognition.mp4`,
+        embedUrl: 'https://www.youtube.com/embed/YYYYYYYYYYY',
+      },
+    },
+    'ipad-accessibility-seniors': {
+      name: 'How to Set Up iPad Accessibility for Vision, Hearing, and Mobility',
+      description: 'Step-by-step guide to configure iPad accessibility settings for seniors: larger text, zoom, voice control, hearing aid pairing, touch accommodations, and more. All built-in, free, no extra apps.',
+      image: '/images/guides/accessibility-hero.jpg',
+      totalTime: 'PT15M',
+      estimatedCost: { '@type': 'MonetaryAmount', currency: 'CAD', value: '0' },
+      supply: [
+        { '@type': 'HowToSupply', name: 'iPad', description: 'Running iPadOS 16 or later' },
+        { '@type': 'HowToSupply', name: 'Apple ID', description: 'For iCloud sync of accessibility settings' },
+      ],
+      tool: [
+        { '@type': 'HowToTool', name: 'Settings app', description: 'All accessibility settings live here' },
+        { '@type': 'HowToTool', name: 'Accessibility Shortcut', description: 'Triple-click side button for instant toggle' },
+      ],
+      step: [
+        { '@type': 'HowToStep', position: 1, name: 'Make Text Larger and Bolder', itemListElement: [
+          { '@type': 'HowToDirection', text: 'Settings -> Display & Brightness -> Text Size -> drag slider right' },
+          { '@type': 'HowToDirection', text: 'Toggle Bold Text ON' },
+          { '@type': 'HowToDirection', text: 'For even larger: Settings -> Accessibility -> Display & Text Size -> Larger Text ON -> drag slider' },
+        ]},
+        { '@type': 'HowToStep', position: 2, name: 'Enable Zoom for Instant Magnification', itemListElement: [
+          { '@type': 'HowToDirection', text: 'Settings -> Accessibility -> Zoom -> ON' },
+          { '@type': 'HowToDirection', text: 'Double-tap 3 fingers = toggle zoom' },
+          { '@type': 'HowToDirection', text: 'Drag 3 fingers = move around' },
+        ]},
+        { '@type': 'HowToStep', position: 3, name: 'Set Up Speak Selection and Speak Screen', itemListElement: [
+          { '@type': 'HowToDirection', text: 'Settings -> Accessibility -> Spoken Content -> Speak Selection ON' },
+          { '@type': 'HowToDirection', text: 'Speak Screen ON -> swipe down with 2 fingers from top' },
+        ]},
+        { '@type': 'HowToStep', position: 4, name: 'Pair Hearing Aids (MFi Devices)', itemListElement: [
+          { '@type': 'HowToDirection', text: 'Settings -> Accessibility -> Hearing Devices' },
+          { '@type': 'HowToDirection', text: 'Put hearing aids in pairing mode -> tap to pair' },
+        ]},
+        { '@type': 'HowToStep', position: 5, name: 'Configure Touch Accommodations', itemListElement: [
+          { '@type': 'HowToDirection', text: 'Settings -> Accessibility -> Touch -> Touch Accommodations ON' },
+          { '@type': 'HowToDirection', text: 'Hold Duration: tap must hold X seconds to register' },
+          { '@type': 'HowToDirection', text: 'Ignore Repeat: multiple rapid taps count as one' },
+        ]},
+        { '@type': 'HowToStep', position: 6, name: 'Set Up Accessibility Shortcut', itemListElement: [
+          { '@type': 'HowToDirection', text: 'Settings -> Accessibility -> Accessibility Shortcut' },
+          { '@type': 'HowToDirection', text: 'Select top 3-6 features -> triple-click side button to toggle' },
+        ]},
+      ],
+      video: {
+        '@type': 'VideoObject',
+        name: 'iPad Accessibility Setup for Seniors',
+        description: 'Rahul configures top 10 accessibility settings step-by-step. 5-minute demo.',
+        thumbnailUrl: '/images/guides/accessibility-video-thumb.jpg',
+        uploadDate: '2025-01-22',
+        duration: 'PT5M',
+        contentUrl: `${biz.url}/videos/ipad-accessibility-setup.mp4`,
+        embedUrl: 'https://www.youtube.com/embed/DDDDDDDDDDD',
+      },
+    },
+    'icloud-photos-explained': {
+      name: 'How to Organize Photos with Albums and iCloud for Seniors',
+      description: 'Step-by-step guide to turn on iCloud Photos, create Albums, share with family, find photos fast, and free up iPad space.',
+      image: '/images/guides/icloud-photos-hero.jpg',
+      totalTime: 'PT20M',
+      estimatedCost: { '@type': 'MonetaryAmount', currency: 'CAD', value: '1.49' },
+      supply: [
+        { '@type': 'HowToSupply', name: 'iPad or iPhone', description: 'Running iOS 16 or later' },
+        { '@type': 'HowToSupply', name: 'Apple ID', description: 'Your Apple account with iCloud' },
+        { '@type': 'HowToSupply', name: 'iCloud Storage Plan', description: '50 GB ($1.49/mo) or 200 GB ($4.49/mo) recommended' },
+        { '@type': 'HowToSupply', name: 'Wi-Fi Connection', description: 'Required for initial upload and ongoing sync' },
+      ],
+      tool: [
+        { '@type': 'HowToTool', name: 'Settings app', description: 'For iCloud Photos setup' },
+        { '@type': 'HowToTool', name: 'Photos app', description: 'For Albums, sharing, search' },
+        { '@type': 'HowToTool', name: 'Notes app', description: 'Built-in document scanner for paper photos' },
+      ],
+      step: [
+        { '@type': 'HowToStep', position: 1, name: 'Turn On iCloud Photos', itemListElement: [
+          { '@type': 'HowToDirection', text: 'Settings -> Your Name -> iCloud -> Photos -> Toggle ON' },
+          { '@type': 'HowToDirection', text: 'Select "Optimize iPad Storage"' },
+        ]},
+        { '@type': 'HowToStep', position: 2, name: 'Create Your First Album', itemListElement: [
+          { '@type': 'HowToDirection', text: 'Photos -> Albums -> + -> New Album -> Name it -> Save -> Add photos' },
+        ]},
+        { '@type': 'HowToStep', position: 3, name: 'Share Albums with Family', itemListElement: [
+          { '@type': 'HowToDirection', text: 'Albums -> + -> New Shared Album -> Add contacts -> Create' },
+        ]},
+        { '@type': 'HowToStep', position: 4, name: 'Find Any Photo Instantly', itemListElement: [
+          { '@type': 'HowToDirection', text: 'Photos -> Search -> Type person, place, date, category' },
+          { '@type': 'HowToDirection', text: 'Name faces: Albums -> People & Pets -> tap face -> Add Name' },
+        ]},
+        { '@type': 'HowToStep', position: 5, name: 'Free Up iPad Space', itemListElement: [
+          { '@type': 'HowToDirection', text: 'Settings -> General -> iPad Storage -> Photos -> Ensure Optimize is ON' },
+        ]},
+        { '@type': 'HowToStep', position: 6, name: 'Scan Paper Photos', itemListElement: [
+          { '@type': 'HowToDirection', text: 'Notes -> 📷 -> Scan Documents -> Keep Scan -> Save' },
+          { '@type': 'HowToDirection', text: 'Markup -> add labels (names, dates, events)' },
+          { '@type': 'HowToDirection', text: 'Share -> Save to Photos -> add to "Family History" album' },
+        ]},
+      ],
+      video: {
+        '@type': 'VideoObject',
+        name: 'iCloud Photos Setup & Organization for Seniors',
+        description: 'Rahul walks through iCloud Photos, Albums, sharing, search, and scanning. 6-minute demo.',
+        thumbnailUrl: '/images/guides/icloud-photos-video-thumb.jpg',
+        uploadDate: '2025-01-25',
+        duration: 'PT6M',
+        contentUrl: `${biz.url}/videos/icloud-photos-organization.mp4`,
+        embedUrl: 'https://www.youtube.com/embed/CCCCCCCCCCC',
+      },
+    },
+    'best-ipad-for-seniors': {
+      name: 'How to Choose the Best iPad for Seniors in 2025',
+      description: 'Decision guide comparing iPad mini, iPad 10th gen, iPad Air, and iPad Pro for seniors. Covers price, weight, screen, storage, cellular, accessories, and where to buy. Includes printable checklist.',
+      image: '/images/guides/best-ipad-hero.jpg',
+      totalTime: 'PT10M',
+      estimatedCost: { '@type': 'MonetaryAmount', currency: 'CAD', value: '349' },
+      supply: [
+        { '@type': 'HowToSupply', name: 'Budget range', description: '$349–$1300+ depending on model' },
+        { '@type': 'HowToSupply', name: 'Use case clarity', description: 'Know primary uses: FaceTime, email, photos, reading, banking, typing' },
+      ],
+      tool: [
+        { '@type': 'HowToTool', name: 'Apple Store', description: 'Best buying experience — free setup, 14-day return, trade-in' },
+        { '@type': 'HowToTool', name: 'Decision checklist', description: 'Printable PDF with model comparison and accessory list' },
+      ],
+      step: [
+        { '@type': 'HowToStep', position: 1, name: 'Determine Your Budget Tier', itemListElement: [
+          { '@type': 'HowToDirection', text: 'Under $400: iPad 10th Gen (2022) — 128 GB recommended' },
+          { '@type': 'HowToDirection', text: '$500–800: iPad mini (A17 Pro, 2024) — best for most seniors' },
+        ]},
+        { '@type': 'HowToStep', position: 2, name: 'Choose Storage: Minimum 128 GB', itemListElement: [
+          { '@type': 'HowToDirection', text: 'Light use: 128 GB minimum' },
+          { '@type': 'HowToDirection', text: 'Moderate photos: 256 GB' },
+        ]},
+        { '@type': 'HowToStep', position: 3, name: 'Decide: Wi-Fi Only vs Cellular', itemListElement: [
+          { '@type': 'HowToDirection', text: 'Wi-Fi Only: Home Wi-Fi, coffee shops, library' },
+          { '@type': 'HowToDirection', text: 'Cellular: +$150–250 + plan. Tip: Wi-Fi + iPhone hotspot = free cellular' },
+        ]},
+        { '@type': 'HowToStep', position: 4, name: 'Pick Essential Accessories', itemListElement: [
+          { '@type': 'HowToDirection', text: 'Case + Stand: ESR Rebound Magnetic ($39) — protects, props, auto sleep/wake' },
+          { '@type': 'HowToDirection', text: 'Matte Screen Protector: Paperlike ($29) or ESR ($15) — less glare, paper feel' },
+        ]},
+        { '@type': 'HowToStep', position: 5, name: 'Avoid Common Mistakes', itemListElement: [
+          { '@type': 'HowToDirection', text: 'NO used iPads from Kijiji/FB — no warranty, battery unknown, iCloud lock risk' },
+          { '@type': 'HowToDirection', text: 'NO iPad 9th Gen (2021) or older — Lightning port, 2–3 years updates left' },
+        ]},
+      ],
+      video: {
+        '@type': 'VideoObject',
+        name: 'Best iPad for Seniors 2025 Comparison',
+        description: 'Rahul compares all 4 models hands-on with senior use cases. 4-minute demo.',
+        thumbnailUrl: '/images/guides/best-ipad-video-thumb.jpg',
+        uploadDate: '2025-01-28',
+        duration: 'PT4M',
+        contentUrl: `${biz.url}/videos/best-ipad-comparison.mp4`,
+        embedUrl: 'https://www.youtube.com/embed/EEEEEEEEEEE',
+      },
+    },
+    'password-manager-seniors': {
+      name: 'How to Set Up Bitwarden Password Manager for Seniors',
+      description: 'Step-by-step guide to create a Bitwarden account, install on iPad/computer, save logins, generate strong passwords, enable 2FA, organize with folders, set up emergency access, and share securely with family. Free, open-source, cross-platform.',
+      image: '/images/guides/password-manager-hero.jpg',
+      totalTime: 'PT20M',
+      estimatedCost: { '@type': 'MonetaryAmount', currency: 'CAD', value: '0' },
+      supply: [
+        { '@type': 'HowToSupply', name: 'Email address', description: 'Your primary email for account recovery' },
+        { '@type': 'HowToSupply', name: 'Master password', description: 'One strong passphrase you\'ll remember (write it down!)' },
+        { '@type': 'HowToSupply', name: 'iPad / iPhone', description: 'For mobile app and autofill setup' },
+        { '@type': 'HowToSupply', name: 'Computer with browser', description: 'For browser extension (Chrome, Firefox, Edge, Safari)' },
+      ],
+      tool: [
+        { '@type': 'HowToTool', name: 'Bitwarden app (iOS)', description: 'Free on App Store' },
+        { '@type': 'HowToTool', name: 'Bitwarden browser extension', description: 'Chrome, Firefox, Edge, Safari' },
+        { '@type': 'HowToTool', name: 'Bitwarden web vault', description: 'https://vault.bitwarden.com for advanced settings' },
+      ],
+      step: [
+        { '@type': 'HowToStep', position: 1, name: 'Create Your Bitwarden Account', itemListElement: [
+          { '@type': 'HowToDirection', text: 'Go to https://bitwarden.com -> Get Started Free' },
+          { '@type': 'HowToDirection', text: 'Enter your primary email address' },
+          { '@type': 'HowToDirection', text: 'Create Master Password: use a passphrase like "Correct-Horse-Battery-Staple-2024!"' },
+          { '@type': 'HowToDirection', text: 'WRITE IT DOWN and store in a safe place. No recovery exists.' },
+        ]},
+        { '@type': 'HowToStep', position: 2, name: 'Install Bitwarden on iPad and Computer', itemListElement: [
+          { '@type': 'HowToDirection', text: 'iPad: App Store -> Search "Bitwarden" -> Get -> Open -> Log in' },
+          { '@type': 'HowToDirection', text: 'Enable Face ID: Settings -> Unlock with Face ID -> ON' },
+          { '@type': 'HowToDirection', text: 'Enable Autofill: iPad Settings -> Passwords -> AutoFill Passwords -> ON -> Select Bitwarden' },
+          { '@type': 'HowToDirection', text: 'Computer: bitwarden.com/download -> Install browser extension -> Log in -> Pin to toolbar' },
+        ]},
+        { '@type': 'HowToStep', position: 3, name: 'Save Your First Logins', itemListElement: [
+          { '@type': 'HowToDirection', text: 'Visit a site (bank, email) -> Log in normally' },
+          { '@type': 'HowToDirection', text: 'Bitwarden pop-up appears -> Add -> Save' },
+        ]},
+        { '@type': 'HowToStep', position: 4, name: 'Generate Strong Unique Passwords for Every Site', itemListElement: [
+          { '@type': 'HowToDirection', text: 'Bitwarden -> Generator -> Type: Password -> Length: 20+ -> All options ON' },
+          { '@type': 'HowToDirection', text: 'Generate -> Copy -> Paste into site\'s "Change Password" page -> Save in Bitwarden' },
+        ]},
+        { '@type': 'HowToStep', position: 5, name: 'Store Two-Factor Authentication (2FA) Codes in Bitwarden', itemListElement: [
+          { '@type': 'HowToDirection', text: 'Bitwarden entry -> Edit -> Two-Factor Authentication (TOTP)' },
+          { '@type': 'HowToDirection', text: 'On website: Security Settings -> Enable 2FA -> Authenticator App' },
+          { '@type': 'HowToDirection', text: 'Scan QR code with Bitwarden (camera icon) OR enter manual key' },
+        ]},
+        { '@type': 'HowToStep', position: 6, name: 'Organize with Folders and Favorites', itemListElement: [
+          { '@type': 'HowToDirection', text: 'Create folders: Banking, Government, Health, Shopping, Utilities, Family, Personal' },
+          { '@type': 'HowToDirection', text: 'Star top 5-10 entries -> Favorites -> Appear at top of autofill list' },
+        ]},
+      ],
+      video: {
+        '@type': 'VideoObject',
+        name: 'Bitwarden Password Manager Setup for Seniors',
+        description: 'Rahul sets up Bitwarden from scratch: account, install, logins, 2FA, folders, emergency access, sharing. 8-minute demo.',
+        thumbnailUrl: '/images/guides/password-manager-video-thumb.jpg',
+        uploadDate: '2025-01-30',
+        duration: 'PT8M',
+        contentUrl: `${biz.url}/videos/bitwarden-setup.mp4`,
+        embedUrl: 'https://www.youtube.com/embed/GGGGGGGGGGG',
+      },
+    },
+  };
+
+  return guides[guideId] || null;
+}
+
+function faqPageSchema() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    '@id': `${biz.url}#faq`,
+    mainEntity: (biz.faqs || []).map((faq: any) => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.answer,
+      },
+    })),
+  };
+}
+
+function breadcrumbSchema(items: Array<{ name: string; url: string }>) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: (items || []).map((item, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: item.name,
+      item: `${biz.url}${item.url}`,
+    })),
+  };
+}
+
+function webSiteSchema() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    '@id': `${biz.url}#website`,
+    url: biz.url,
+    name: biz.name,
+    publisher: { '@id': `${biz.url}#business` },
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: {
+        '@type': 'EntryPoint',
+        urlTemplate: `${biz.url}/?s={search_term_string}`,
+      },
+      'query-input': 'required name=search_term_string',
+    },
+  };
+}
+
+const { type, data, serviceId, guideId } = Astro.props;
+
+let schema: any = null;
+
+switch (type) {
+  case 'LocalBusiness':
+    schema = localBusinessSchema();
+    break;
+  case 'Service':
+    schema = serviceSchema(serviceId!);
+    break;
+  case 'Person':
+    schema = personSchema();
+    break;
+  case 'HowTo':
+    schema = howToSchema(guideId!);
+    break;
+  case 'FAQPage':
+    schema = faqPageSchema();
+    break;
+  case 'BreadcrumbList':
+    schema = breadcrumbSchema(data?.items || []);
+    break;
+  case 'WebSite':
+    schema = webSiteSchema();
+    break;
+}
+
+let output = null;
+if (schema) {
+  // Combine multiple schemas into @graph if needed
+  output = schema['@graph'] ? schema : { '@context': 'https://schema.org', '@graph': [schema] };
+}
+---
+
+{output && (
+  <script type="application/ld+json" set:html={JSON.stringify(output)} />
+)}
+
+<script is:inline>
+  // This component only outputs JSON-LD in the head via the layout
+</script>

@@ -1,0 +1,76 @@
+---
+// CTA.astro - Simple version first
+interface Props {
+  variant?: 'primary' | 'secondary' | 'inline';
+  title?: string;
+  description?: string;
+  buttonText?: string;
+  buttonUrl?: string;
+  showPhone?: boolean;
+  class?: string;
+}
+
+const {
+  variant = 'primary',
+  title = 'Ready to Get Started?',
+  description = 'Your first 15-minute consultation is free. No pressure, no commitment.',
+  buttonText = 'Book Your Free Consultation',
+  buttonUrl = '/contact',
+  showPhone = true,
+  class = '',
+} = Astro.props;
+
+const businessData = await import('../data/business.json');
+const { telephone, email } = businessData.business;
+
+const phoneDisplay = telephone.replace('+1-', '');
+const phoneHref = 'tel:+16137027712';
+---
+
+<div class="cta">
+  <h2 class="cta-title">{title}</h2>
+  <p class="cta-description">{description}</p>
+  <a href={buttonUrl} class="cta-btn">
+    {buttonText}
+  </a>
+  <a href={phoneHref} class="cta-phone">
+    Call {phoneDisplay}
+  </a>
+</div>
+
+<style>
+  .cta {
+    padding: 2rem 1.5rem;
+    text-align: center;
+  }
+  .cta-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 0 0.75rem;
+  }
+  .cta-description {
+    font-size: 1.0625rem;
+    margin: 0 0 1.5rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .cta-btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-size: 1.0625rem;
+    font-weight: 600;
+    background: #1e40af;
+    color: white;
+    border-radius: 9999px;
+  }
+  .cta-phone {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 1rem 1.5rem;
+    font-size: 1.0625rem;
+    font-weight: 600;
+    color: #1e40af;
+    text-decoration: none;
+  }
+</style>

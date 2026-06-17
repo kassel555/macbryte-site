@@ -1,0 +1,85 @@
+{
+  "name": "MacBryte",
+  "short_name": "MacBryte",
+  "description": "Personalized technology coaching for seniors and beginners in Ottawa, Barrhaven, Nepean, and Kanata.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1e40af",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/images/icons/icon-72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/images/icons/icon-96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/images/icons/icon-128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/images/icons/icon-144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/images/icons/icon-152.png",
+      "sizes": "152x152",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/images/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/images/icons/icon-384.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/images/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ],
+  "categories": ["education", "health", "productivity"],
+  "screenshots": [],
+  "shortcuts": [
+    {
+      "name": "Book Free Consultation",
+      "short_name": "Book Now",
+      "description": "Schedule your free 15-minute consultation",
+      "url": "/contact",
+      "icons": [{ "src": "/images/icons/calendar-icon.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "View Services",
+      "short_name": "Services",
+      "description": "Browse all coaching services",
+      "url": "/services",
+      "icons": [{ "src": "/images/icons/services-icon.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Read Guides",
+      "short_name": "Guides",
+      "description": "Free step-by-step tutorials",
+      "url": "/guides",
+      "icons": [{ "src": "/images/icons/guide-icon.png", "sizes": "192x192" }]
+    }
+  ]
+}

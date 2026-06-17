@@ -1,0 +1,21 @@
+# Robots.txt for MacBryte
+# Place at https://macbryte.com/robots.txt
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://macbryte.com/sitemap.xml
+
+# Disallow admin/private areas (adjust paths to your CMS)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /drafts/
+Disallow: /*.json$
+Disallow: /*.xml$
+
+# Crawl-delay (optional - be polite to server)
+Crawl-delay: 10
+
+# Host directive (deprecated but harmless)
+Host: https://macbryte.com

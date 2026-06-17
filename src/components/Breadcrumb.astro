@@ -1,0 +1,79 @@
+---
+// Breadcrumb.astro
+interface Props {
+  items: Array<{ name: string; url: string }>;
+}
+
+const { items } = Astro.props;
+const { business } = await import('../data/business.json');
+---
+
+<nav class="breadcrumb" aria-label="Breadcrumb" itemprop="breadcrumb">
+  <ol class="breadcrumb-list" itemscope itemtype="https://schema.org/BreadcrumbList">
+    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="breadcrumb-item">
+      <a href="/" itemprop="item" class="breadcrumb-link">
+        <span itemprop="name">Home</span>
+      </a>
+      <meta itemprop="position" content="1" />
+    </li>
+    {items.map((item, index) => (
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="breadcrumb-item">
+        {index === items.length - 1 ? (
+          <span itemprop="name" class="breadcrumb-current" aria-current="page">{item.name}</span>
+        ) : (
+          <a href={item.url} itemprop="item" class="breadcrumb-link">
+            <span itemprop="name">{item.name}</span>
+          </a>
+        )}
+        <meta itemprop="position" content={index + 2} />
+      </li>
+    ))}
+  </ol>
+
+  <Schema type="BreadcrumbList" data={{ items: [{ name: 'Home', url: '/' }, ...items] }} />
+</nav>
+
+<style>
+  .breadcrumb {
+    padding: 1rem 0;
+    font-size: 0.875rem;
+  }
+
+  .breadcrumb-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .breadcrumb-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-gray-500, #6b7280);
+  }
+
+  .breadcrumb-item:not(:first-child)::before {
+    content: '/';
+    color: var(--color-gray-400, #9ca3af);
+    font-weight: 400;
+  }
+
+  .breadcrumb-link {
+    color: var(--color-gray-500, #6b7280);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .breadcrumb-link:hover {
+    color: var(--color-primary, #1e40af);
+  }
+
+  .breadcrumb-current {
+    color: var(--color-text, #1f2937);
+    font-weight: 500;
+  }
+</style>
