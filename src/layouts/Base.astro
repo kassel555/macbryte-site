@@ -75,6 +75,18 @@ const pageTitle = title === business.name ? title : `${title} | ${business.name}
     <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
     
+    <!-- Google Search Console verification -->
+    <meta name="google-site-verification" content="YGr8mbOEN0qokad_RkSTVebAyaAMeO3TEu0HMq2Udms" />
+
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T09TPLMQLQ"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-T09TPLMQLQ');
+    </script>
+
     <!-- Preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -88,17 +100,20 @@ const pageTitle = title === business.name ? title : `${title} | ${business.name}
     <style is:inline>
       /* Critical CSS - inlined for performance */
       :root {
-        --color-primary: #1e40af;
-        --color-primary-dark: #1e3a8a;
-        --color-primary-light: #eff6ff;
+        --color-primary: #FF7557;
+        --color-primary-dark: #FF9280;
+        --color-primary-light: #FFF4F2;
         --color-text: #1f2937;
         --color-text-light: #6b7280;
         --color-surface: #ffffff;
         --color-border: #e5e7eb;
-        --color-gray-100: #f3f4f6;
+        --color-gray-100: #F7F7FA;
         --color-gray-500: #6b7280;
         --color-gray-900: #111827;
         --color-gray-800: #1f2937;
+        --coral: #FF7557;
+        --purple: #8B7CFF;
+        --yellow: #FFD166;
         --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
         --container-max: 1200px;
         --spacing-xs: 0.5rem;
@@ -166,6 +181,12 @@ const pageTitle = title === business.name ? title : `${title} | ${business.name}
     <a href="#main" class="sr-only skip-link">Skip to main content</a>
     
     <Header />
+    
+    <noscript>
+      <div style="background:#fff3cd;color:#856404;padding:1rem;text-align:center;font-family:sans-serif;">
+        MacBryte uses JavaScript for enhanced features. Please enable JavaScript for the best experience, or continue browsing — all content is still accessible.
+      </div>
+    </noscript>
     
     <main id="main" role="main">
       <slot />
