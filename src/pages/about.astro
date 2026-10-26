@@ -1,0 +1,44 @@
+---
+import Base from '../layouts/Base.astro';
+import Testimonials from '../components/Testimonials.astro';
+import FirstStep from '../components/FirstStep.astro';
+import { site } from '../data/site';
+
+const jsonld = [JSON.stringify({
+  '@context': 'https://schema.org', '@type': 'AboutPage', url: site.url + '/about',
+  mainEntity: {
+    '@type': 'Person', '@id': `${site.url}/about#rahul`, name: site.coach.name,
+    jobTitle: 'Co-Founder and Computer Coach', image: site.url + site.coach.photo,
+    worksFor: { '@id': `${site.url}/#business` },
+    knowsAbout: ['macOS', 'Windows', 'iPhone', 'iPad', 'Online safety', 'Scam prevention', 'Video calling', 'Digital photo organization'],
+    areaServed: site.areas.map((name) => ({ '@type': 'City', name })),
+  },
+})];
+---
+<Base title="About Rahul, Your Macbryte Computer Coach | Ottawa" description="Meet Rahul, Co-Founder of Macbryte. Patient, one-on-one computer lessons for seniors in Ottawa, Kanata, Nepean and Barrhaven — Mac, PC, iPad and iPhone." path="/about" jsonld={jsonld}>
+  <section class="px-4 py-12 md:py-16 bg-gradient-to-b from-white to-[#f2f1fa]">
+    <div class="max-w-5xl mx-auto grid gap-10 md:grid-cols-[1fr_1.4fr] items-center">
+      <img src={site.coach.photo} alt={`${site.coach.name}, Co-Founder of Macbryte`} width="480" height="480" class="w-full max-w-sm mx-auto rounded-3xl shadow-xl" />
+      <div>
+        <p class="text-coral-dark font-semibold uppercase tracking-wide text-sm mb-3">About Macbryte</p>
+        <h1 class="text-gray-900 mb-5">Hi, I'm {site.coach.name}</h1>
+        <p class="text-xl text-gray-700 mb-4">I'm the Co-Founder of Macbryte, and I teach people across Ottawa to feel at home with their computers, tablets and phones.</p>
+        <p class="text-gray-700 mb-4">My students are mostly seniors and beginners. Some have just bought their first Mac; some have used a PC for years but never felt in control of it. Every lesson is one-on-one, on the device you already own, and at a pace that suits you.</p>
+        <p class="text-gray-700">So far I've taught {site.stats.students} students over {site.stats.hours} hours of lessons — in kitchens across {site.areas.join(', ')}, and online.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="px-4 py-12 bg-white">
+    <div class="max-w-4xl mx-auto grid gap-6 md:grid-cols-3">
+      {[
+        ['Patient, always', 'Ask the same question as often as you like. We slow down, write the steps down, and practise until it sticks.'],
+        ['Your device, your goals', 'Mac or PC, iPad or iPhone. We start with what you actually want to do — email, photos, video calls, banking safely.'],
+        ['Notes to keep', 'You get simple written reminders after each session, so nothing is forgotten before next time.'],
+      ].map(([t, d]) => <div class="rounded-2xl bg-[#f8f7fc] p-6"><h2 class="text-xl font-bold text-gray-900 mb-2">{t}</h2><p class="text-gray-700 text-base">{d}</p></div>)}
+    </div>
+  </section>
+
+  <Testimonials heading="What students say" />
+  <FirstStep />
+</Base>

@@ -1,0 +1,66 @@
+---
+import Base from '../layouts/Base.astro';
+import posts from '../data/posts.json';
+import { site } from '../data/site';
+
+const order = ['Safety & scams', 'Getting started', 'Staying connected', 'Photos & memories'];
+const sorted = [...posts].sort((a, b) => b.date.localeCompare(a.date));
+const latest = sorted.slice(0, 3);
+const byCat = order.map((c) => ({ c, items: sorted.filter((p) => p.category === c) })).filter((g) => g.items.length);
+const slug = (c: string) => c.toLowerCase().replace(/[^a-z]+/g, '-').replace(/-$/, '');
+
+const jsonld = [JSON.stringify({
+  '@context': 'https://schema.org', '@type': 'Blog', name: 'Macbryte Tech Tips', url: site.url + '/blog',
+  description: 'Free, plain-language technology tips for seniors and beginners from Macbryte in Ottawa.',
+  publisher: { '@id': `${site.url}/#business` },
+  blogPost: sorted.map((p) => ({ '@type': 'BlogPosting', headline: p.title, url: `${site.url}/blog/${p.slug}`, datePublished: p.date })),
+})];
+---
+<Base title="Tech Tips for Seniors — Free Guides | Macbryte Ottawa" description="Free, plain-language computer and phone tips for seniors: scams, Windows 10, iPhone, iPad, video calls, photos and more — from your Ottawa Macbryte coach." path="/blog" jsonld={jsonld}>
+  <section class="px-4 pt-12 pb-8 bg-gradient-to-b from-white to-[#f2f1fa]">
+    <div class="max-w-5xl mx-auto">
+      <h1 class="text-gray-900 mb-4">Tech tips for seniors</h1>
+      <p class="text-xl text-gray-700 max-w-2xl mb-6">Free, plain-language guides from your Macbryte coach. No jargon — just the steps, written for real people on real devices.</p>
+      <nav aria-label="Topics" class="flex flex-wrap gap-2">
+        {byCat.map((g) => <a href={`#${slug(g.c)}`} class="rounded-full bg-white border border-gray-200 px-4 py-2 font-medium text-gray-800 hover:border-coral-dark">{g.c} ({g.items.length})</a>)}
+      </nav>
+    </div>
+  </section>
+
+  <section class="px-4 py-10 bg-white">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">Latest</h2>
+      <div class="grid gap-5 md:grid-cols-3">
+        {latest.map((p) => (
+          <a href={`/blog/${p.slug}`} class="rounded-2xl border border-gray-100 bg-[#fff6f3] hover:shadow-md p-6">
+            <p class="text-sm font-semibold text-coral-dark mb-2">{p.category}</p>
+            <h3 class="text-xl font-bold text-gray-900 mb-2">{p.title}</h3>
+            <p class="text-gray-700 text-base">{p.excerpt}</p>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {byCat.map((g) => (
+    <section id={slug(g.c)} class="px-4 py-10 odd:bg-[#f8f7fc] even:bg-white scroll-mt-24">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">{g.c}</h2>
+        <div class="grid gap-4 md:grid-cols-2">
+          {g.items.map((p) => (
+            <a href={`/blog/${p.slug}`} class="rounded-2xl bg-white border border-gray-100 hover:border-coral-dark p-5">
+              <h3 class="text-lg font-semibold text-gray-900 mb-1">{p.title}</h3>
+              <p class="text-gray-600 text-base">{p.excerpt}</p>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  ))}
+
+  <section class="px-4 py-12 bg-white text-center">
+    <h2 class="text-2xl font-bold text-gray-900 mb-3">Rather have someone show you?</h2>
+    <p class="text-gray-700 mb-6">One-on-one lessons on your own device, at home in {site.areas.join(', ')} or online.</p>
+    <a href="/contact" class="inline-flex rounded-full bg-coral-dark hover:bg-coral text-white font-semibold px-7 py-4 text-lg">Book a Free Call</a>
+  </section>
+</Base>

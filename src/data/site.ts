@@ -21,6 +21,7 @@ export const nav = [
   { href: '/pricing', label: 'Pricing' },
   { href: '/happy-students', label: 'Happy Students' },
   { href: '/blog', label: 'Tips' },
+  { href: '/about', label: 'About' },
   { href: '/contact', label: 'Contact' },
 ];
 

@@ -3,6 +3,7 @@ import Base from '../layouts/Base.astro';
 import Testimonials from '../components/Testimonials.astro';
 import FirstStep from '../components/FirstStep.astro';
 import { site, services } from '../data/site';
+import allPosts from '../data/posts.json';
 
 const title = 'Computer Lessons for Seniors in Ottawa — Mac or PC | Macbryte';
 const description = 'One-on-one computer lessons for seniors in Ottawa, Kanata, Nepean and Barrhaven. Mac, PC, iPad or iPhone — at home or online. Call 613-702-7712.';
@@ -21,15 +22,13 @@ const faqs = [
   { q: 'Can a family member book for me?', a: 'Yes. Many first calls come from a son or daughter. We will talk with you both and plan lessons around what you want to learn.' },
 ];
 
-const posts = [
-  ['/blog/mac-vs-pc-which-is-right-for-you', 'Mac vs. PC: Which computer is right for you?'],
-  ['/blog/how-to-spot-scam-emails', 'How to spot a scam email (and what to do about it)'],
-  ['/blog/video-calling-your-grandkids', 'How to video call your grandkids, step by step'],
-];
+const posts = [...allPosts].sort((a, b) => b.date.localeCompare(a.date)).slice(0, 3).map((p) => [`/blog/${p.slug}`, p.title]);
 
 const jsonld = [
   JSON.stringify({
-    '@context': 'https://schema.org', '@type': 'LocalBusiness', name: 'Macbryte',
+    '@context': 'https://schema.org', '@type': 'LocalBusiness', '@id': site.url + '/#business', name: 'Macbryte', logo: site.url + '/images/logo.png',
+    founder: { '@type': 'Person', '@id': site.url + '/about#rahul', name: site.coach.name, jobTitle: 'Co-Founder' },
+    knowsAbout: ['Computer lessons for seniors', 'Mac', 'Windows PC', 'iPad', 'iPhone', 'Online safety', 'Scam prevention'],
     description: 'One-on-one computer lessons for seniors and beginners — Mac, PC, iPad and iPhone — in Ottawa, Kanata, Nepean and Barrhaven.',
     url: site.url, telephone: '+1-613-702-7712', email: site.email, image: site.url + '/og-image.jpg', priceRange: '$85–$925',
     address: { '@type': 'PostalAddress', addressLocality: 'Ottawa', addressRegion: 'ON', addressCountry: 'CA' },
@@ -69,7 +68,7 @@ const jsonld = [
             : <div class="w-20 h-20 rounded-full bg-[#f2f1fa] text-[#6B5CE7] text-3xl font-bold flex items-center justify-center" aria-hidden="true">{site.coach.name[0]}</div>}
           <div>
             <p class="text-sm text-gray-500 uppercase tracking-wide">Your coach</p>
-            <p class="text-2xl font-bold text-gray-900">{site.coach.name}</p>
+            <p class="text-2xl font-bold text-gray-900"><a href="/about" class="hover:underline">{site.coach.name}</a></p>
             <p class="text-gray-600">Co-Founder of Macbryte</p>
           </div>
         </div>
@@ -166,7 +165,7 @@ const jsonld = [
           </a>
         ))}
       </div>
-      <p class="text-center mt-8"><a href="/blog" class="font-semibold text-[#6B5CE7] hover:underline">All 12 tips →</a></p>
+      <p class="text-center mt-8"><a href="/blog" class="font-semibold text-[#6B5CE7] hover:underline">All {allPosts.length} tips →</a></p>
     </div>
   </section>
 </Base>
