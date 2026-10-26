@@ -11,7 +11,7 @@ export const site = {
   coach: {
     name: 'Rahul',
     // Drop a real photo at public/images/coach.jpg and set this to '/images/coach.jpg'.
-    photo: '',
+    photo: '/images/coach.jpg',
   },
 };
 
