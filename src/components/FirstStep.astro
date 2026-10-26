@@ -1,0 +1,21 @@
+---
+import { site } from '../data/site';
+const { heading = 'Not sure where to start? Start with a free call.' } = Astro.props;
+---
+<section class="py-14 px-4 md:px-8 bg-gradient-to-b from-[#f2f1fa] to-white">
+  <div class="max-w-5xl mx-auto grid gap-10 md:grid-cols-2 items-center">
+    <div>
+      <h2 class="text-gray-900 mb-4">{heading}</h2>
+      <p class="text-gray-700 mb-6">A relaxed 15-minute phone chat — no cost, no obligation, and no technical knowledge needed. Tell us what's frustrating you and we'll suggest where to begin.</p>
+      <div class="flex flex-col sm:flex-row gap-3">
+        <a href={site.phoneHref} class="inline-flex justify-center items-center rounded-full bg-coral-dark hover:bg-coral text-white font-semibold px-7 py-4 text-lg">Call {site.phone}</a>
+        <a href="/contact" class="inline-flex justify-center items-center rounded-full border-2 border-gray-900 text-gray-900 font-semibold px-7 py-4 text-lg hover:bg-gray-900 hover:text-white">Request a callback</a>
+      </div>
+    </div>
+    <ol class="space-y-5">
+      <li class="flex gap-4"><span class="shrink-0 w-10 h-10 rounded-full bg-coral-dark text-white font-bold flex items-center justify-center">1</span><div><p class="font-semibold text-gray-900">Free 15-minute call</p><p class="text-gray-600">We talk about your device — Mac, PC, iPad or iPhone — and what you'd like to do with it.</p></div></li>
+      <li class="flex gap-4"><span class="shrink-0 w-10 h-10 rounded-full bg-coral-dark text-white font-bold flex items-center justify-center">2</span><div><p class="font-semibold text-gray-900">Your first lesson</p><p class="text-gray-600">At your kitchen table in {site.areas.join(', ')}, or online. Just have your device and any passwords you know handy.</p></div></li>
+      <li class="flex gap-4"><span class="shrink-0 w-10 h-10 rounded-full bg-coral-dark text-white font-bold flex items-center justify-center">3</span><div><p class="font-semibold text-gray-900">Notes to keep</p><p class="text-gray-600">You get simple written reminders after each session, so nothing is forgotten before next time.</p></div></li>
+    </ol>
+  </div>
+</section>

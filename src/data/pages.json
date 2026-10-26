@@ -1,0 +1,425 @@
+{
+ "/how-it-works": {
+  "slug": "how-it-works",
+  "title": "How Macbryte Works | Personal Computer Coaching Process",
+  "description": "See how Macbryte's one-on-one computer coaching works in Ottawa, Nepean, Kanata and Barrhaven, from assessment to patient practice.",
+  "ogImage": "/og-image.jpg",
+  "jsonld": [
+   "{\"@context\":\"https://schema.org\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"How long are the coaching sessions?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Most coaching sessions last 60-90 minutes, depending on your preference and learning pace.\"}},{\"@type\":\"Question\",\"name\":\"Do I need my own computer for Macbryte coaching?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Yes, you'll need your own device for the sessions. This way, you learn on the same device you'll be using every day.\"}},{\"@type\":\"Question\",\"name\":\"How quickly will I see progress with computer coaching?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Most students report feeling more confident after just 2-3 sessions, with significant progress visible within a month of regular practice.\"}}]}",
+   "{\"@context\":\"https://schema.org\",\"@type\":\"HowTo\",\"name\":\"How Macbryte Personal Computer Coaching Works\",\"description\":\"Our approach is designed to make learning computers simple, personalized, and effective for everyone.\",\"step\":[{\"@type\":\"HowToStep\",\"name\":\"Personal Assessment\",\"text\":\"We start by understanding your current skills, goals, and learning style to create a personalized plan.\"},{\"@type\":\"HowToStep\",\"name\":\"Personalized Coaching\",\"text\":\"Your dedicated coach works with you one-on-one, focusing on practical skills at your own pace.\"},{\"@type\":\"HowToStep\",\"name\":\"Real-World Practice\",\"text\":\"Apply what you learn to your actual needs, whether it's email, photos, or staying connected with family.\"}]}",
+   "{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://macbryte.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"How It Works\"}]}"
+  ]
+ },
+ "/what-you-learn": {
+  "slug": "what-you-learn",
+  "title": "What You'll Learn - Computer Skills & Courses | Macbryte",
+  "description": "Explore computer skills for beginners in Ottawa: email, online safety, video calls, photos, Mac basics and everyday digital confidence.",
+  "ogImage": "/og-image.jpg",
+  "jsonld": [
+   "{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://macbryte.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"What You'll Learn\"}]}"
+  ]
+ },
+ "/pricing": {
+  "slug": "pricing",
+  "title": "Pricing - Computer Coaching Packages | Macbryte",
+  "description": "Clear pricing for one-on-one computer coaching in Ottawa, Nepean, Kanata and Barrhaven. Choose single lessons or discounted packages.",
+  "ogImage": "/og-image.jpg",
+  "jsonld": [
+   "{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://macbryte.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Pricing\"}]}"
+  ]
+ },
+ "/happy-students": {
+  "slug": "happy-students",
+  "title": "Student Testimonials & Success Stories | Macbryte",
+  "description": "Read testimonials from Ottawa-area students who learned computers with Macbryte's patient one-on-one coaching for seniors and beginners.",
+  "ogImage": "/og-image.jpg",
+  "jsonld": [
+   "{\"@context\":\"https://schema.org\",\"@type\":\"LocalBusiness\",\"name\":\"Macbryte\",\"url\":\"https://macbryte.com\",\"review\":[{\"@type\":\"Review\",\"author\":{\"@type\":\"Person\",\"name\":\"Doug\"},\"reviewRating\":{\"@type\":\"Rating\",\"ratingValue\":\"5\",\"bestRating\":\"5\"},\"reviewBody\":\"I have been working with Macbryte for a few months and give them a 5-star rating. They really know Mac computers! No matter what your level of knowledge or experience you have already, their services are always professional and patient.\"},{\"@type\":\"Review\",\"author\":{\"@type\":\"Person\",\"name\":\"Ken\"},\"reviewRating\":{\"@type\":\"Rating\",\"ratingValue\":\"5\",\"bestRating\":\"5\"},\"reviewBody\":\"I have worked with Macbryte for a few months and give them a 5-star rating. I'm impressed with the patience of the coach. The Macbryte coach makes the complex seem logical when he breaks it all down into the basic components.\"},{\"@type\":\"Review\",\"author\":{\"@type\":\"Person\",\"name\":\"Om\"},\"reviewRating\":{\"@type\":\"Rating\",\"ratingValue\":\"5\",\"bestRating\":\"5\"},\"reviewBody\":\"I have been taking computer lessons from Macbryte for the last couple of months. As a first time user of MacBook, I truly enjoyed learning from the Macbryte trainer, who is very patient and always thorough. This type of approach deserves excellence rating.\"},{\"@type\":\"Review\",\"author\":{\"@type\":\"Person\",\"name\":\"Susan\"},\"reviewRating\":{\"@type\":\"Rating\",\"ratingValue\":\"5\",\"bestRating\":\"5\"},\"reviewBody\":\"My teacher was extremely knowledgeable, patient and methodical. He also gave me reminder notes of what he taught me also so that I wouldn't forget. I highly recommend this company.\"},{\"@type\":\"Review\",\"author\":{\"@type\":\"Person\",\"name\":\"Sally\"},\"reviewRating\":{\"@type\":\"Rating\",\"ratingValue\":\"5\",\"bestRating\":\"5\"},\"reviewBody\":\"Macbryte gave me lessons customized for my needs that helped me become fluent with my new phone fast. The instructor was patient and went at the right pace. Highly recommended.\"}]}",
+   "{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://macbryte.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Happy Students\",\"item\":\"https://macbryte.com/happy-students\"}]}",
+   "{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://macbryte.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Happy Students\"}]}"
+  ]
+ },
+ "/computer-lessons-for-seniors": {
+  "slug": "computer-lessons-for-seniors",
+  "title": "Computer Lessons for Seniors in Ottawa | Macbryte",
+  "description": "Patient computer lessons for seniors in Ottawa. Learn email, video calls, online safety and everyday digital skills at your own pace.",
+  "ogImage": "/og-image.jpg",
+  "jsonld": [
+   "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Top Computer Lessons for Seniors in 2026: Easy Ways to Boost Your Digital Skills\",\"description\":\"Discover the top computer lessons for seniors that make learning easy and empowering in today's fast-changing tech landscape.\",\"author\":{\"@type\":\"Organization\",\"name\":\"Macbryte\",\"url\":\"https://macbryte.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Macbryte\",\"url\":\"https://macbryte.com\"},\"datePublished\":\"2026-01-01\",\"dateModified\":\"2026-07-05\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://macbryte.com/computer-lessons-for-seniors\"}}",
+   "{\"@context\":\"https://schema.org\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"What computer skills do seniors need to learn in 2026?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Essential skills include basic computer operation, internet browsing, email and messaging apps, online security and privacy, video conferencing, digital health monitoring, and basic troubleshooting.\"}},{\"@type\":\"Question\",\"name\":\"What are the benefits of computer lessons for seniors?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Benefits include enhanced independence for everyday tasks, improved social connections, access to telehealth services, increased online safety, and continuous mental engagement through learning.\"}},{\"@type\":\"Question\",\"name\":\"Should seniors take online or in-person computer classes?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Both options have advantages. Online classes offer flexibility and self-paced learning, while in-person classes provide direct interaction and hands-on assistance. Blended learning combining both approaches is often ideal.\"}}]}",
+   "{\"@context\":\"https://schema.org\",\"@type\":\"Course\",\"name\":\"Computer Lessons for Seniors\",\"description\":\"Comprehensive computer literacy courses designed to build confidence and digital skills for seniors step by step.\",\"provider\":{\"@type\":\"Organization\",\"name\":\"Macbryte\",\"url\":\"https://macbryte.com\"},\"audience\":{\"@type\":\"Audience\",\"audienceType\":\"Seniors\"},\"educationalLevel\":\"Beginner\",\"teaches\":[\"Basic Computer Operation\",\"Internet Browsing\",\"Email\",\"Video Conferencing\",\"Online Security\",\"Digital Health Monitoring\"]}",
+   "{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://macbryte.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Computer Lessons for Seniors\"}]}"
+  ]
+ },
+ "/computer-coaching-ottawa": {
+  "slug": "computer-coaching-ottawa",
+  "title": "Computer Coaching in Ottawa | One-on-One | Macbryte",
+  "description": "Personal computer coaching in Ottawa, Ontario. Patient one-on-one lessons at your home or online. Learn computers at your own pace with a friendly local coach.",
+  "ogImage": "/og-image.jpg",
+  "jsonld": [
+   "{\"@context\":\"https://schema.org\",\"@type\":\"Service\",\"name\":\"Computer Coaching in Ottawa\",\"serviceType\":\"Computer Training\",\"provider\":{\"@type\":\"LocalBusiness\",\"name\":\"Macbryte\",\"url\":\"https://macbryte.com\",\"telephone\":\"+1-613-702-7712\"},\"areaServed\":{\"@type\":\"City\",\"name\":\"Ottawa\",\"sameAs\":\"https://en.wikipedia.org/wiki/Ottawa\"},\"description\":\"Personalized one-on-one computer coaching in Ottawa. Lessons for seniors and beginners.\",\"audience\":{\"@type\":\"Audience\",\"audienceType\":\"Seniors and beginners\"},\"availableLanguage\":\"en\",\"offers\":{\"@type\":\"Offer\",\"price\":\"60.00\",\"priceCurrency\":\"CAD\"}}",
+   "{\"@context\":\"https://schema.org\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"How much does computer coaching in Ottawa cost?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Macbryte offers flexible packages starting at $60/hour for one-on-one computer coaching in Ottawa. We offer single sessions and discounted multi-session packages.\"}},{\"@type\":\"Question\",\"name\":\"Do you offer in-home computer lessons in Ottawa?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Yes! Macbryte provides in-home computer coaching throughout Ottawa, including Centretown, Glebe, Westboro, Sandy Hill. We also offer online sessions if you prefer.\"}},{\"@type\":\"Question\",\"name\":\"What computer skills can I learn in Ottawa with Macbryte?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Everything from the basics \u2014 using email, browsing the internet, video calling \u2014 to staying safe online, organizing photos, and understanding your Mac or PC.\"}}]}",
+   "{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://macbryte.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Computer Coaching in Ottawa\"}]}"
+  ]
+ },
+ "/computer-coaching-kanata": {
+  "slug": "computer-coaching-kanata",
+  "title": "Computer Coaching in Kanata | In-Home & Online | Macbryte",
+  "description": "Patient computer coaching in Kanata. One-on-one lessons at your home or online for seniors and beginners, serving Kanata and Stittsville.",
+  "ogImage": "/og-image.jpg",
+  "jsonld": [
+   "{\"@context\":\"https://schema.org\",\"@type\":\"Service\",\"name\":\"Computer Coaching in Kanata\",\"serviceType\":\"Computer Training\",\"provider\":{\"@type\":\"LocalBusiness\",\"name\":\"Macbryte\",\"url\":\"https://macbryte.com\",\"telephone\":\"+1-613-702-7712\"},\"areaServed\":{\"@type\":\"City\",\"name\":\"Kanata\",\"sameAs\":\"https://en.wikipedia.org/wiki/Kanata\"},\"description\":\"Personalized one-on-one computer coaching in Kanata. Lessons for seniors and beginners.\",\"audience\":{\"@type\":\"Audience\",\"audienceType\":\"Seniors and beginners\"},\"availableLanguage\":\"en\",\"offers\":{\"@type\":\"Offer\",\"price\":\"60.00\",\"priceCurrency\":\"CAD\"}}",
+   "{\"@context\":\"https://schema.org\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"How much does computer coaching in Kanata cost?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Macbryte offers flexible packages starting at $60/hour for one-on-one computer coaching in Kanata. We offer single sessions and discounted multi-session packages.\"}},{\"@type\":\"Question\",\"name\":\"Do you offer in-home computer lessons in Kanata?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Yes! Macbryte provides in-home computer coaching throughout Kanata, including Kanata Lakes, Bridlewood, Katimavik, Beaverbrook. We also offer online sessions if you prefer.\"}},{\"@type\":\"Question\",\"name\":\"What computer skills can I learn in Kanata with Macbryte?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Everything from the basics \u2014 using email, browsing the internet, video calling \u2014 to staying safe online, organizing photos, and understanding your Mac or PC.\"}}]}",
+   "{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://macbryte.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Computer Coaching in Kanata\"}]}"
+  ]
+ },
+ "/computer-coaching-barrhaven": {
+  "slug": "computer-coaching-barrhaven",
+  "title": "Computer Coaching in Barrhaven | In-Home & Online | Macbryte",
+  "description": "Find patient computer coaching in Barrhaven. One-on-one lessons in your home or online. Serving Barrhaven, Half Moon Bay, Stonebridge and all of South Nepean.",
+  "ogImage": "/og-image.jpg",
+  "jsonld": [
+   "{\"@context\":\"https://schema.org\",\"@type\":\"Service\",\"name\":\"Computer Coaching in Barrhaven\",\"serviceType\":\"Computer Training\",\"provider\":{\"@type\":\"LocalBusiness\",\"name\":\"Macbryte\",\"url\":\"https://macbryte.com\",\"telephone\":\"+1-613-702-7712\"},\"areaServed\":{\"@type\":\"City\",\"name\":\"Barrhaven\",\"sameAs\":\"https://en.wikipedia.org/wiki/Barrhaven\"},\"description\":\"Personalized one-on-one computer coaching in Barrhaven. Lessons for seniors and beginners.\",\"audience\":{\"@type\":\"Audience\",\"audienceType\":\"Seniors and beginners\"},\"availableLanguage\":\"en\",\"offers\":{\"@type\":\"Offer\",\"price\":\"60.00\",\"priceCurrency\":\"CAD\"}}",
+   "{\"@context\":\"https://schema.org\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"How much does computer coaching in Barrhaven cost?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Macbryte offers flexible packages starting at $60/hour for one-on-one computer coaching in Barrhaven. We offer single sessions and discounted multi-session packages.\"}},{\"@type\":\"Question\",\"name\":\"Do you offer in-home computer lessons in Barrhaven?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Yes! Macbryte provides in-home computer coaching throughout Barrhaven, including Barrhaven, Half Moon Bay, Stonebridge, Chapman Mills. We also offer online sessions if you prefer.\"}},{\"@type\":\"Question\",\"name\":\"What computer skills can I learn in Barrhaven with Macbryte?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Everything from the basics \u2014 using email, browsing the internet, video calling \u2014 to staying safe online, organizing photos, and understanding your Mac or PC.\"}}]}",
+   "{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://macbryte.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Computer Coaching in Barrhaven\"}]}"
+  ]
+ },
+ "/computer-coaching-nepean": {
+  "slug": "computer-coaching-nepean",
+  "title": "Computer Coaching in Nepean | In-Home & Online | Macbryte",
+  "description": "Patient computer coaching in Nepean. One-on-one lessons at your home or online. Serving Bells Corners, Centrepointe, Leslie Park and all of Nepean, Ottawa.",
+  "ogImage": "/og-image.jpg",
+  "jsonld": [
+   "{\"@context\":\"https://schema.org\",\"@type\":\"Service\",\"name\":\"Computer Coaching in Nepean\",\"serviceType\":\"Computer Training\",\"provider\":{\"@type\":\"LocalBusiness\",\"name\":\"Macbryte\",\"url\":\"https://macbryte.com\",\"telephone\":\"+1-613-702-7712\"},\"areaServed\":{\"@type\":\"City\",\"name\":\"Nepean\",\"sameAs\":\"https://en.wikipedia.org/wiki/Nepean\"},\"description\":\"Personalized one-on-one computer coaching in Nepean. Lessons for seniors and beginners.\",\"audience\":{\"@type\":\"Audience\",\"audienceType\":\"Seniors and beginners\"},\"availableLanguage\":\"en\",\"offers\":{\"@type\":\"Offer\",\"price\":\"60.00\",\"priceCurrency\":\"CAD\"}}",
+   "{\"@context\":\"https://schema.org\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"How much does computer coaching in Nepean cost?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Macbryte offers flexible packages starting at $60/hour for one-on-one computer coaching in Nepean. We offer single sessions and discounted multi-session packages.\"}},{\"@type\":\"Question\",\"name\":\"Do you offer in-home computer lessons in Nepean?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Yes! Macbryte provides in-home computer coaching throughout Nepean, including Bells Corners, Centrepointe, Leslie Park, Meadowlands. We also offer online sessions if you prefer.\"}},{\"@type\":\"Question\",\"name\":\"What computer skills can I learn in Nepean with Macbryte?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Everything from the basics \u2014 using email, browsing the internet, video calling \u2014 to staying safe online, organizing photos, and understanding your Mac or PC.\"}}]}",
+   "{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://macbryte.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Computer Coaching in Nepean\"}]}"
+  ]
+ },
+ "/services/ipad-help-for-seniors-ottawa": {
+  "slug": "services__ipad-help-for-seniors-ottawa",
+  "title": "iPad Help for Seniors in Ottawa | Macbryte",
+  "description": "Patient one-on-one iPad help for seniors in Ottawa. Learn FaceTime, email, photos, apps, settings, online safety, and everyday iPad skills at your pace.",
+  "ogImage": "/og-image.jpg",
+  "jsonld": [
+   "{\"@context\":\"https://schema.org\",\"@type\":\"Service\",\"name\":\"iPad Help for Seniors in Ottawa\",\"serviceType\":\"iPad lessons and technology coaching\",\"description\":\"Patient one-on-one iPad help for seniors in Ottawa. Learn FaceTime, email, photos, apps, settings, online safety, and everyday iPad skills at your pace.\",\"url\":\"https://macbryte.com/services/ipad-help-for-seniors-ottawa\",\"provider\":{\"@type\":\"LocalBusiness\",\"name\":\"Macbryte\",\"url\":\"https://macbryte.com\",\"telephone\":\"+1-613-702-7712\",\"email\":\"support@macbryte.com\",\"address\":{\"@type\":\"PostalAddress\",\"addressLocality\":\"Ottawa\",\"addressRegion\":\"ON\",\"addressCountry\":\"CA\"}},\"areaServed\":[{\"@type\":\"City\",\"name\":\"Ottawa\"},{\"@type\":\"City\",\"name\":\"Kanata\"},{\"@type\":\"City\",\"name\":\"Barrhaven\"},{\"@type\":\"City\",\"name\":\"Nepean\"}],\"audience\":{\"@type\":\"Audience\",\"audienceType\":\"Seniors and beginners\"},\"availableLanguage\":\"en\"}",
+   "{\"@context\":\"https://schema.org\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"Do you teach absolute beginners how to use an iPad?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Yes. Macbryte works with seniors and beginners who may be using an iPad for the first time. Lessons start with the basics and move at your pace.\"}},{\"@type\":\"Question\",\"name\":\"Can you help with FaceTime, email, and photos?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Yes. iPad lessons can cover FaceTime, Messages, email, photos, apps, Safari, settings, passwords, and any everyday task you want to feel more confident using.\"}},{\"@type\":\"Question\",\"name\":\"Do I need to bring my iPad somewhere?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"No. Macbryte offers one-on-one coaching in the Ottawa area and can help online when appropriate. Learning on your own device is usually best.\"}},{\"@type\":\"Question\",\"name\":\"Can you make the iPad easier to see and hear?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Yes. We can adjust text size, brightness, volume, notifications, accessibility settings, and other options so the iPad feels more comfortable.\"}}]}",
+   "{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://macbryte.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Computer Lessons for Seniors\",\"item\":\"https://macbryte.com/computer-lessons-for-seniors\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"iPad Help for Seniors in Ottawa\"}]}"
+  ]
+ },
+ "/services/email-help-for-seniors-ottawa": {
+  "slug": "services__email-help-for-seniors-ottawa",
+  "title": "Email Help for Seniors in Ottawa | Macbryte",
+  "description": "Patient one-on-one email help for seniors in Ottawa. Learn Gmail, Apple Mail, Outlook, attachments, folders, spam, scam emails, and safe everyday email skills.",
+  "ogImage": "/og-image.jpg",
+  "jsonld": [
+   "{\"@context\":\"https://schema.org\",\"@type\":\"Service\",\"name\":\"Email Help for Seniors in Ottawa\",\"serviceType\":\"Email lessons and technology coaching\",\"description\":\"Patient one-on-one email help for seniors in Ottawa. Learn Gmail, Apple Mail, Outlook, attachments, folders, spam, scam emails, and safe everyday email skills.\",\"url\":\"https://macbryte.com/services/email-help-for-seniors-ottawa\",\"provider\":{\"@type\":\"LocalBusiness\",\"name\":\"Macbryte\",\"url\":\"https://macbryte.com\",\"telephone\":\"+1-613-702-7712\",\"email\":\"support@macbryte.com\",\"address\":{\"@type\":\"PostalAddress\",\"addressLocality\":\"Ottawa\",\"addressRegion\":\"ON\",\"addressCountry\":\"CA\"}},\"areaServed\":[{\"@type\":\"City\",\"name\":\"Ottawa\"},{\"@type\":\"City\",\"name\":\"Kanata\"},{\"@type\":\"City\",\"name\":\"Barrhaven\"},{\"@type\":\"City\",\"name\":\"Nepean\"}],\"audience\":{\"@type\":\"Audience\",\"audienceType\":\"Seniors and beginners\"},\"availableLanguage\":\"en\"}",
+   "{\"@context\":\"https://schema.org\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"Can you help me with Gmail, Outlook, Apple Mail, or my internet provider email?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Yes. Macbryte can help with common email services including Gmail, Outlook, Apple Mail, iCloud Mail, Rogers, Bell, and other accounts. We work with the email setup you already have.\"}},{\"@type\":\"Question\",\"name\":\"Can you teach me how to send photos and attachments?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Yes. We can show you how to attach photos, documents, forms, and scanned files, and how to check that the right file was sent before you press send.\"}},{\"@type\":\"Question\",\"name\":\"Can you help me know which emails are scams?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Yes. We teach practical warning signs: suspicious links, urgent threats, fake invoices, strange sender addresses, requests for passwords, and messages that feel too good to be true.\"}},{\"@type\":\"Question\",\"name\":\"Can you clean up or organize a messy inbox?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Yes. We can help you understand folders, labels, search, unsubscribe options, spam, trash, and simple routines so your inbox feels less overwhelming.\"}}]}",
+   "{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://macbryte.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Computer Lessons for Seniors\",\"item\":\"https://macbryte.com/computer-lessons-for-seniors\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Email Help for Seniors in Ottawa\"}]}"
+  ]
+ },
+ "/services/photo-organization-help-ottawa": {
+  "slug": "services__photo-organization-help-ottawa",
+  "title": "Photo Organization Help in Ottawa | Macbryte",
+  "description": "Patient one-on-one photo organization help in Ottawa. Learn Apple Photos, Google Photos, albums, duplicates, iCloud, backups, sharing, and safe photo storage.",
+  "ogImage": "/og-image.jpg",
+  "jsonld": [
+   "{\"@context\":\"https://schema.org\",\"@type\":\"Service\",\"name\":\"Photo Organization Help in Ottawa\",\"serviceType\":\"Photo organization and technology coaching\",\"description\":\"Patient one-on-one photo organization help in Ottawa. Learn Apple Photos, Google Photos, albums, duplicates, iCloud, backups, sharing, and safe photo storage.\",\"url\":\"https://macbryte.com/services/photo-organization-help-ottawa\",\"provider\":{\"@type\":\"LocalBusiness\",\"name\":\"Macbryte\",\"url\":\"https://macbryte.com\",\"telephone\":\"+1-613-702-7712\",\"email\":\"support@macbryte.com\",\"address\":{\"@type\":\"PostalAddress\",\"addressLocality\":\"Ottawa\",\"addressRegion\":\"ON\",\"addressCountry\":\"CA\"}},\"areaServed\":[{\"@type\":\"City\",\"name\":\"Ottawa\"},{\"@type\":\"City\",\"name\":\"Kanata\"},{\"@type\":\"City\",\"name\":\"Barrhaven\"},{\"@type\":\"City\",\"name\":\"Nepean\"}],\"audience\":{\"@type\":\"Audience\",\"audienceType\":\"Seniors and beginners\"},\"availableLanguage\":\"en\"}",
+   "{\"@context\":\"https://schema.org\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"Can you help with Apple Photos, iCloud Photos, or Google Photos?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Yes. Macbryte can help with Apple Photos on Mac, iPhone, and iPad, as well as Google Photos and common Windows photo folders. We explain where your photos are and how they are syncing.\"}},{\"@type\":\"Question\",\"name\":\"Can you help me remove duplicate photos safely?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Yes. We can show you how to review duplicates carefully, keep the best copy, and avoid deleting something important. We move slowly and explain each step before changes are made.\"}},{\"@type\":\"Question\",\"name\":\"Can you help me back up photos to an external drive?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Yes. We can help you understand external drives, cloud backup, iCloud, Google Photos, and simple backup routines so family memories are not only stored in one place.\"}},{\"@type\":\"Question\",\"name\":\"Can you help me share photos with family?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Yes. We can teach you how to send photos by email or text, create shared albums, use Facebook safely, or make simple links for family members.\"}}]}",
+   "{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://macbryte.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Computer Lessons for Seniors\",\"item\":\"https://macbryte.com/computer-lessons-for-seniors\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Photo Organization Help in Ottawa\"}]}"
+  ]
+ },
+ "/services/online-safety-help-for-seniors-ottawa": {
+  "slug": "services__online-safety-help-for-seniors-ottawa",
+  "title": "Online Safety Help for Seniors in Ottawa | Macbryte",
+  "description": "Patient one-on-one online safety help for seniors in Ottawa. Learn scam email warning signs, safer passwords, two-factor authentication, privacy, and safe browsing.",
+  "ogImage": "/og-image.jpg",
+  "jsonld": [
+   "{\"@context\":\"https://schema.org\",\"@type\":\"Service\",\"name\":\"Online Safety Help for Seniors in Ottawa\",\"serviceType\":\"Online safety and scam awareness technology coaching\",\"description\":\"Patient one-on-one online safety help for seniors in Ottawa. Learn scam email warning signs, safer passwords, two-factor authentication, privacy, and safe browsing.\",\"url\":\"https://macbryte.com/services/online-safety-help-for-seniors-ottawa\",\"provider\":{\"@type\":\"LocalBusiness\",\"name\":\"Macbryte\",\"url\":\"https://macbryte.com\",\"telephone\":\"+1-613-702-7712\",\"email\":\"support@macbryte.com\",\"address\":{\"@type\":\"PostalAddress\",\"addressLocality\":\"Ottawa\",\"addressRegion\":\"ON\",\"addressCountry\":\"CA\"}},\"areaServed\":[{\"@type\":\"City\",\"name\":\"Ottawa\"},{\"@type\":\"City\",\"name\":\"Kanata\"},{\"@type\":\"City\",\"name\":\"Barrhaven\"},{\"@type\":\"City\",\"name\":\"Nepean\"}],\"audience\":{\"@type\":\"Audience\",\"audienceType\":\"Seniors and beginners\"},\"availableLanguage\":\"en\"}",
+   "{\"@context\":\"https://schema.org\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"Can you help me tell if an email or text message is a scam?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Yes. We can teach you how to check the sender, links, attachments, wording, and urgency of a message before you click or reply. If something feels suspicious, we help you learn how to pause and verify it safely.\"}},{\"@type\":\"Question\",\"name\":\"Can you help if I already clicked something suspicious?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Yes. We can help you think through what happened, change affected passwords, check important account settings, and decide whether you should contact your bank, phone provider, or another trusted organization directly.\"}},{\"@type\":\"Question\",\"name\":\"Do I need to understand technical security terms?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"No. We explain online safety in simple everyday language. You do not need to know jargon like phishing, malware, VPNs, cookies, or two-factor authentication before starting.\"}},{\"@type\":\"Question\",\"name\":\"Can you help set up two-factor authentication or a password manager?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Yes. We can explain the choices, help you decide what is appropriate, and walk through setup at a careful pace so you understand how to use it afterward.\"}}]}",
+   "{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://macbryte.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Computer Lessons for Seniors\",\"item\":\"https://macbryte.com/computer-lessons-for-seniors\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Online Safety Help for Seniors in Ottawa\"}]}"
+  ]
+ },
+ "/services/video-calling-help-for-seniors-ottawa": {
+  "slug": "services__video-calling-help-for-seniors-ottawa",
+  "title": "Video Calling Help for Seniors in Ottawa | Macbryte",
+  "description": "Patient one-on-one video calling help for seniors in Ottawa. Learn Zoom, FaceTime, WhatsApp, camera, microphone, links, and family video calls at your pace.",
+  "ogImage": "/og-image.jpg",
+  "jsonld": [
+   "{\"@context\":\"https://schema.org\",\"@type\":\"Service\",\"name\":\"Video Calling Help for Seniors in Ottawa\",\"serviceType\":\"Video calling technology coaching for seniors\",\"description\":\"Patient one-on-one video calling help for seniors in Ottawa. Learn Zoom, FaceTime, WhatsApp, camera, microphone, links, and family video calls at your pace.\",\"url\":\"https://macbryte.com/services/video-calling-help-for-seniors-ottawa\",\"provider\":{\"@type\":\"LocalBusiness\",\"name\":\"Macbryte\",\"url\":\"https://macbryte.com\",\"telephone\":\"+1-613-702-7712\",\"email\":\"support@macbryte.com\",\"address\":{\"@type\":\"PostalAddress\",\"addressLocality\":\"Ottawa\",\"addressRegion\":\"ON\",\"addressCountry\":\"CA\"}},\"areaServed\":[{\"@type\":\"City\",\"name\":\"Ottawa\"},{\"@type\":\"City\",\"name\":\"Kanata\"},{\"@type\":\"City\",\"name\":\"Barrhaven\"},{\"@type\":\"City\",\"name\":\"Nepean\"}],\"audience\":{\"@type\":\"Audience\",\"audienceType\":\"Seniors and beginners\"},\"availableLanguage\":\"en\"}",
+   "{\"@context\":\"https://schema.org\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"Can you help me use Zoom for family calls or appointments?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Yes. We can help you install Zoom, join a meeting link, check your camera and microphone, mute and unmute, use chat, and feel more comfortable before an important call.\"}},{\"@type\":\"Question\",\"name\":\"Can you help with FaceTime or WhatsApp video calls?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Yes. We can help with FaceTime on iPhone, iPad, and Mac, and WhatsApp video calls on phones and tablets. We can also help you decide which app is easiest for your family.\"}},{\"@type\":\"Question\",\"name\":\"What if my camera or microphone does not work?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"We can walk through the common causes, including app permissions, volume, input/output settings, Bluetooth headphones, Wi-Fi, and device updates.\"}},{\"@type\":\"Question\",\"name\":\"Can I learn video calls even if I am nervous on camera?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Absolutely. Many people feel awkward at first. We start with simple practice calls and teach small habits that make video calls feel more natural and less stressful.\"}}]}",
+   "{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://macbryte.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Computer Lessons for Seniors\",\"item\":\"https://macbryte.com/computer-lessons-for-seniors\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Video Calling Help for Seniors in Ottawa\"}]}"
+  ]
+ },
+ "/services/iphone-help-for-seniors-ottawa": {
+  "slug": "services__iphone-help-for-seniors-ottawa",
+  "title": "iPhone Help for Seniors in Ottawa | Macbryte",
+  "description": "Patient one-on-one iPhone help for seniors in Ottawa. Learn calls, texts, FaceTime, photos, Apple ID, apps, settings, and online safety at your pace.",
+  "ogImage": "/og-image.jpg",
+  "jsonld": [
+   "{\"@context\":\"https://schema.org\",\"@type\":\"Service\",\"name\":\"iPhone Help for Seniors in Ottawa\",\"serviceType\":\"iPhone lessons and technology coaching\",\"description\":\"Patient one-on-one iPhone help for seniors in Ottawa. Learn calls, texts, FaceTime, photos, Apple ID, apps, settings, and online safety at your pace.\",\"url\":\"https://macbryte.com/services/iphone-help-for-seniors-ottawa\",\"provider\":{\"@type\":\"LocalBusiness\",\"name\":\"Macbryte\",\"url\":\"https://macbryte.com\",\"telephone\":\"+1-613-702-7712\",\"email\":\"support@macbryte.com\",\"address\":{\"@type\":\"PostalAddress\",\"addressLocality\":\"Ottawa\",\"addressRegion\":\"ON\",\"addressCountry\":\"CA\"}},\"areaServed\":[{\"@type\":\"City\",\"name\":\"Ottawa\"},{\"@type\":\"City\",\"name\":\"Kanata\"},{\"@type\":\"City\",\"name\":\"Barrhaven\"},{\"@type\":\"City\",\"name\":\"Nepean\"}],\"audience\":{\"@type\":\"Audience\",\"audienceType\":\"Seniors and beginners\"},\"availableLanguage\":\"en\"}",
+   "{\"@context\":\"https://schema.org\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"Do you teach absolute beginners how to use an iPhone?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Yes. Macbryte helps seniors and beginners who may be using an iPhone for the first time or who feel unsure after an update. Lessons start with the basics and move at your pace.\"}},{\"@type\":\"Question\",\"name\":\"Can you help with calls, texts, FaceTime, and photos?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Yes. iPhone lessons can cover phone calls, contacts, Messages, FaceTime, photos, email, Safari, Maps, apps, settings, and any everyday task you want to feel more comfortable using.\"}},{\"@type\":\"Question\",\"name\":\"Can you help with Apple ID, iCloud, and passwords?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Yes. We can help you understand your Apple ID, iCloud, backups, password prompts, two-factor authentication, and what to do when the iPhone asks for a code or approval.\"}},{\"@type\":\"Question\",\"name\":\"Can you make my iPhone easier to see, hear, and use?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Yes. We can adjust text size, brightness, volume, ringer settings, notifications, accessibility tools, and other options so the iPhone feels more comfortable.\"}}]}",
+   "{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://macbryte.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Computer Lessons for Seniors\",\"item\":\"https://macbryte.com/computer-lessons-for-seniors\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"iPhone Help for Seniors in Ottawa\"}]}"
+  ]
+ },
+ "/services/password-manager-help-for-seniors-ottawa": {
+  "slug": "services__password-manager-help-for-seniors-ottawa",
+  "title": "Password Manager Help for Seniors in Ottawa | Macbryte",
+  "description": "Patient one-on-one password manager help for seniors in Ottawa. Learn iCloud Keychain, 1Password, Bitwarden, passkeys, two-factor codes, and safer passwords.",
+  "ogImage": "/og-image.jpg",
+  "jsonld": [
+   "{\"@context\":\"https://schema.org\",\"@type\":\"Service\",\"name\":\"Password Manager Help for Seniors in Ottawa\",\"serviceType\":\"Password manager setup and account safety coaching\",\"description\":\"Patient one-on-one password manager help for seniors in Ottawa. Learn iCloud Keychain, 1Password, Bitwarden, passkeys, two-factor codes, and safer passwords.\",\"url\":\"https://macbryte.com/services/password-manager-help-for-seniors-ottawa\",\"provider\":{\"@type\":\"LocalBusiness\",\"name\":\"Macbryte\",\"url\":\"https://macbryte.com\",\"telephone\":\"+1-613-702-7712\",\"email\":\"support@macbryte.com\",\"address\":{\"@type\":\"PostalAddress\",\"addressLocality\":\"Ottawa\",\"addressRegion\":\"ON\",\"addressCountry\":\"CA\"}},\"areaServed\":[{\"@type\":\"City\",\"name\":\"Ottawa\"},{\"@type\":\"City\",\"name\":\"Kanata\"},{\"@type\":\"City\",\"name\":\"Barrhaven\"},{\"@type\":\"City\",\"name\":\"Nepean\"}],\"audience\":{\"@type\":\"Audience\",\"audienceType\":\"Seniors and beginners\"},\"availableLanguage\":\"en\"}",
+   "{\"@context\":\"https://schema.org\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"What is a password manager?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"A password manager is a secure tool that remembers passwords for you. It can create strong passwords, save them safely, and fill them in when you sign in. You only need to understand the main unlock method and recovery plan.\"}},{\"@type\":\"Question\",\"name\":\"Can you help with iCloud Keychain on iPhone, iPad, or Mac?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Yes. We can help you find saved passwords, understand Apple ID prompts, use Face ID or Touch ID, check password warnings, and decide when to save or update a password.\"}},{\"@type\":\"Question\",\"name\":\"Can you help with 1Password, Bitwarden, or Google Password Manager?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Yes. We can explain the differences, help you choose an option, and walk through setup carefully. We focus on what is practical for your devices and comfort level.\"}},{\"@type\":\"Question\",\"name\":\"Will you need to know my passwords?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"No. Macbryte does not need to know or store your passwords. We can guide you while you type privately, and we teach you how to keep recovery information safe.\"}}]}",
+   "{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://macbryte.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Computer Lessons for Seniors\",\"item\":\"https://macbryte.com/computer-lessons-for-seniors\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Password Manager Help for Seniors in Ottawa\"}]}"
+  ]
+ },
+ "/services/google-maps-help-for-seniors-ottawa": {
+  "slug": "services__google-maps-help-for-seniors-ottawa",
+  "title": "Google Maps Help for Seniors in Ottawa | Macbryte",
+  "description": "Patient one-on-one Google Maps help for seniors in Ottawa. Learn directions, transit, walking routes, saved places, location sharing, and finding local businesses.",
+  "ogImage": "/og-image.jpg",
+  "jsonld": [
+   "{\"@context\":\"https://schema.org\",\"@type\":\"Service\",\"name\":\"Google Maps Help for Seniors in Ottawa\",\"serviceType\":\"Google Maps and smartphone navigation coaching\",\"description\":\"Patient one-on-one Google Maps help for seniors in Ottawa. Learn directions, transit, walking routes, saved places, location sharing, and finding local businesses.\",\"url\":\"https://macbryte.com/services/google-maps-help-for-seniors-ottawa\",\"provider\":{\"@type\":\"LocalBusiness\",\"name\":\"Macbryte\",\"url\":\"https://macbryte.com\",\"telephone\":\"+1-613-702-7712\",\"email\":\"support@macbryte.com\",\"address\":{\"@type\":\"PostalAddress\",\"addressLocality\":\"Ottawa\",\"addressRegion\":\"ON\",\"addressCountry\":\"CA\"}},\"areaServed\":[{\"@type\":\"City\",\"name\":\"Ottawa\"},{\"@type\":\"City\",\"name\":\"Kanata\"},{\"@type\":\"City\",\"name\":\"Barrhaven\"},{\"@type\":\"City\",\"name\":\"Nepean\"}],\"audience\":{\"@type\":\"Audience\",\"audienceType\":\"Seniors and beginners\"},\"availableLanguage\":\"en\"}",
+   "{\"@context\":\"https://schema.org\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"Can you teach Google Maps on an iPhone or iPad?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Yes. We can help you install or find Google Maps, search for places, start directions, use voice guidance, save favourite places, and understand location settings on iPhone or iPad.\"}},{\"@type\":\"Question\",\"name\":\"Can you help me use Google Maps for OC Transpo or walking directions?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Yes. We can practise transit, walking, and driving directions, including how to compare routes, check times, and decide which option feels easiest and safest.\"}},{\"@type\":\"Question\",\"name\":\"Can you help with location sharing?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Yes. We explain what location sharing means, who can see it, how long it lasts, and how to turn it off. You stay in control of what you share.\"}},{\"@type\":\"Question\",\"name\":\"Do I need a Google account?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Not for every feature. Basic searching and directions usually work without signing in, but saved places and some personalized features may need a Google account. We can explain the tradeoffs clearly.\"}}]}",
+   "{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://macbryte.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Computer Lessons for Seniors\",\"item\":\"https://macbryte.com/computer-lessons-for-seniors\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Google Maps Help for Seniors in Ottawa\"}]}"
+  ]
+ },
+ "/course/computer-basics": {
+  "slug": "course__computer-basics",
+  "title": "Computer Basics for Seniors in Ottawa | Macbryte",
+  "description": "Patient computer basics course for seniors and beginners in Ottawa. Learn files, folders, mouse skills, settings, updates and simple troubleshooting.",
+  "ogImage": "/og-image.jpg",
+  "jsonld": [
+   "{\"@context\":\"https://schema.org\",\"@type\":\"Course\",\"name\":\"Computer Basics for Seniors\",\"description\":\"Patient computer basics course for seniors and beginners in Ottawa. Learn files, folders, mouse skills, settings, updates and simple troubleshooting.\",\"url\":\"https://macbryte.com/course/computer-basics\",\"provider\":{\"@type\":\"Organization\",\"name\":\"Macbryte\",\"url\":\"https://macbryte.com\"},\"audience\":{\"@type\":\"Audience\",\"audienceType\":\"Seniors and beginners\"},\"areaServed\":[{\"@type\":\"City\",\"name\":\"Ottawa\"},{\"@type\":\"City\",\"name\":\"Kanata\"},{\"@type\":\"City\",\"name\":\"Barrhaven\"},{\"@type\":\"City\",\"name\":\"Nepean\"}]}",
+   "{\"@context\":\"https://schema.org\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"Is this course only for seniors?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"No. It is designed for seniors and beginners, but anyone who wants patient, plain-language computer help can take it.\"}},{\"@type\":\"Question\",\"name\":\"Can I learn on my own computer?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Yes. Learning on your own Mac or Windows computer is best because the buttons, settings, files, and apps match what you will use every day.\"}},{\"@type\":\"Question\",\"name\":\"Do I need to know anything before starting?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"No. We can start with turning the computer on, using the mouse, finding apps, and understanding the screen in front of you.\"}}]}",
+   "{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://macbryte.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Courses\",\"item\":\"https://macbryte.com/courses\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Computer Basics for Seniors\"}]}"
+  ]
+ },
+ "/course/microsoft-office-help": {
+  "slug": "course__microsoft-office-help",
+  "title": "Microsoft Office Help for Seniors in Ottawa | Macbryte",
+  "description": "Patient Microsoft Office course for seniors in Ottawa. Learn Word, Excel, PowerPoint, files, printing, formatting and everyday documents.",
+  "ogImage": "/og-image.jpg",
+  "jsonld": [
+   "{\"@context\":\"https://schema.org\",\"@type\":\"Course\",\"name\":\"Microsoft Office Help for Seniors\",\"description\":\"Patient Microsoft Office course for seniors in Ottawa. Learn Word, Excel, PowerPoint, files, printing, formatting and everyday documents.\",\"url\":\"https://macbryte.com/course/microsoft-office-help\",\"provider\":{\"@type\":\"Organization\",\"name\":\"Macbryte\",\"url\":\"https://macbryte.com\"},\"audience\":{\"@type\":\"Audience\",\"audienceType\":\"Seniors and beginners\"},\"areaServed\":[{\"@type\":\"City\",\"name\":\"Ottawa\"},{\"@type\":\"City\",\"name\":\"Kanata\"},{\"@type\":\"City\",\"name\":\"Barrhaven\"},{\"@type\":\"City\",\"name\":\"Nepean\"}]}",
+   "{\"@context\":\"https://schema.org\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"Can you help with Word, Excel, and PowerPoint on my own computer?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Yes. Learning on your own Mac or Windows computer is best because your version, files, printer, and settings match what you use every day.\"}},{\"@type\":\"Question\",\"name\":\"Do I need Microsoft 365?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Not always. We can help you understand whether you already have Office, whether a subscription is needed, or whether another tool is enough for your needs.\"}},{\"@type\":\"Question\",\"name\":\"Can you help me make a real document or spreadsheet?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Yes. Practical projects are ideal. We can work on a letter, form, budget, list, presentation, or other document you actually need.\"}}]}",
+   "{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://macbryte.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Courses\",\"item\":\"https://macbryte.com/courses\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Microsoft Office Help for Seniors\"}]}"
+  ]
+ },
+ "/course/safe-online-banking": {
+  "slug": "course__safe-online-banking",
+  "title": "Safe Online Banking for Seniors in Ottawa | Macbryte",
+  "description": "Learn safe online banking with patient Ottawa coaching for seniors. Practise bank websites, passwords, scam checks, e-transfers and safer habits.",
+  "ogImage": "/og-image.jpg",
+  "jsonld": [
+   "{\"@context\":\"https://schema.org\",\"@type\":\"Course\",\"name\":\"Safe Online Banking for Seniors\",\"description\":\"Learn safe online banking with patient Ottawa coaching for seniors. Practise bank websites, passwords, scam checks, e-transfers and safer habits.\",\"url\":\"https://macbryte.com/course/safe-online-banking\",\"provider\":{\"@type\":\"Organization\",\"name\":\"Macbryte\",\"url\":\"https://macbryte.com\"},\"audience\":{\"@type\":\"Audience\",\"audienceType\":\"Seniors and beginners\"},\"areaServed\":[{\"@type\":\"City\",\"name\":\"Ottawa\"},{\"@type\":\"City\",\"name\":\"Kanata\"},{\"@type\":\"City\",\"name\":\"Barrhaven\"},{\"@type\":\"City\",\"name\":\"Nepean\"}]}",
+   "{\"@context\":\"https://schema.org\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"Will you look at my private banking information?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"No. We teach the steps and safety habits while respecting your privacy. You stay in control of your passwords, codes, balances, and personal information.\"}},{\"@type\":\"Question\",\"name\":\"Can you help if I am afraid of scam emails?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Yes. We can practise with examples, build a simple checklist, and show you how to verify suspicious messages without clicking unsafe links.\"}},{\"@type\":\"Question\",\"name\":\"Do you teach e-transfers and bill payments?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Yes. We can explain the process, what each screen means, and how to double-check details before sending money.\"}}]}",
+   "{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://macbryte.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Courses\",\"item\":\"https://macbryte.com/courses\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Safe Online Banking for Seniors\"}]}"
+  ]
+ },
+ "/course/email-made-easy": {
+  "slug": "course__email-made-easy",
+  "title": "Email Help Course for Seniors in Ottawa | Macbryte",
+  "description": "Patient email course for seniors in Ottawa. Learn Gmail, Outlook, Apple Mail, attachments, folders, spam safety and everyday email confidence.",
+  "ogImage": "/og-image.jpg",
+  "jsonld": [
+   "{\"@context\":\"https://schema.org\",\"@type\":\"Course\",\"name\":\"Email Made Easy for Seniors\",\"description\":\"Patient email course for seniors in Ottawa. Learn Gmail, Outlook, Apple Mail, attachments, folders, spam safety and everyday email confidence.\",\"url\":\"https://macbryte.com/course/email-made-easy\",\"provider\":{\"@type\":\"Organization\",\"name\":\"Macbryte\",\"url\":\"https://macbryte.com\"},\"audience\":{\"@type\":\"Audience\",\"audienceType\":\"Seniors and beginners\"},\"areaServed\":[{\"@type\":\"City\",\"name\":\"Ottawa\"},{\"@type\":\"City\",\"name\":\"Kanata\"},{\"@type\":\"City\",\"name\":\"Barrhaven\"},{\"@type\":\"City\",\"name\":\"Nepean\"}]}",
+   "{\"@context\":\"https://schema.org\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"Can you help with Gmail, Outlook, Apple Mail, or Yahoo?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Yes. We can help with common email services and apps, including Gmail, Outlook, Apple Mail, iCloud Mail, Yahoo, and mail on iPhone or iPad.\"}},{\"@type\":\"Question\",\"name\":\"Can I learn how to send photos or documents by email?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Yes. We can practise attaching photos, PDFs, forms, and documents, then saving or printing attachments you receive.\"}},{\"@type\":\"Question\",\"name\":\"Can you help me know which emails are scams?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Yes. We teach simple warning signs and a calm checklist so you can pause, inspect the message, and verify safely before clicking.\"}}]}",
+   "{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://macbryte.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Courses\",\"item\":\"https://macbryte.com/courses\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Email Made Easy for Seniors\"}]}"
+  ]
+ },
+ "/course/internet-basics": {
+  "slug": "course__internet-basics",
+  "title": "Internet Basics Course for Seniors in Ottawa | Macbryte",
+  "description": "Patient internet basics course for seniors in Ottawa. Learn browsers, search, tabs, bookmarks, forms, downloads, maps, passwords and safety.",
+  "ogImage": "/og-image.jpg",
+  "jsonld": [
+   "{\"@context\":\"https://schema.org\",\"@type\":\"Course\",\"name\":\"Internet Basics for Seniors\",\"description\":\"Patient internet basics course for seniors in Ottawa. Learn browsers, search, tabs, bookmarks, forms, downloads, maps, passwords and safety.\",\"url\":\"https://macbryte.com/course/internet-basics\",\"provider\":{\"@type\":\"Organization\",\"name\":\"Macbryte\",\"url\":\"https://macbryte.com\"},\"audience\":{\"@type\":\"Audience\",\"audienceType\":\"Seniors and beginners\"},\"areaServed\":[{\"@type\":\"City\",\"name\":\"Ottawa\"},{\"@type\":\"City\",\"name\":\"Kanata\"},{\"@type\":\"City\",\"name\":\"Barrhaven\"},{\"@type\":\"City\",\"name\":\"Nepean\"}]}",
+   "{\"@context\":\"https://schema.org\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"Can you teach me the difference between Google, Safari, Chrome, and websites?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Yes. That is a common source of confusion, and we explain it with simple examples on your own device.\"}},{\"@type\":\"Question\",\"name\":\"Can you help me fill out online forms safely?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Yes. We can practise forms, confirmation pages, passwords, PDFs, and safe ways to handle personal information online.\"}},{\"@type\":\"Question\",\"name\":\"Can you help me know which websites are safe?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Yes. We teach practical warning signs so you can pause, check the address, avoid fake pop-ups, and verify before clicking or paying.\"}}]}",
+   "{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://macbryte.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Courses\",\"item\":\"https://macbryte.com/courses\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Internet Basics for Seniors\"}]}"
+  ]
+ },
+ "/course/phone-and-social-help": {
+  "slug": "course__phone-and-social-help",
+  "title": "Phone & Social App Help for Seniors in Ottawa | Macbryte",
+  "description": "Patient phone and social app course for seniors in Ottawa. Learn calls, texts, contacts, photos, privacy, Facebook, WhatsApp and safer sharing.",
+  "ogImage": "/og-image.jpg",
+  "jsonld": [
+   "{\"@context\":\"https://schema.org\",\"@type\":\"Course\",\"name\":\"Phone & Social Help for Seniors\",\"description\":\"Patient phone and social app course for seniors in Ottawa. Learn calls, texts, contacts, photos, privacy, Facebook, WhatsApp and safer sharing.\",\"url\":\"https://macbryte.com/course/phone-and-social-help\",\"provider\":{\"@type\":\"Organization\",\"name\":\"Macbryte\",\"url\":\"https://macbryte.com\"},\"audience\":{\"@type\":\"Audience\",\"audienceType\":\"Seniors and beginners\"},\"areaServed\":[{\"@type\":\"City\",\"name\":\"Ottawa\"},{\"@type\":\"City\",\"name\":\"Kanata\"},{\"@type\":\"City\",\"name\":\"Barrhaven\"},{\"@type\":\"City\",\"name\":\"Nepean\"}]}",
+   "{\"@context\":\"https://schema.org\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"Can you help with iPhone and Android phones?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Yes. We can help with iPhone, iPad, Android phones, and common social apps. The lesson is adapted to the device you actually use.\"}},{\"@type\":\"Question\",\"name\":\"Can you help me use Facebook or WhatsApp safely?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Yes. We can explain privacy settings, messages, groups, photos, friend requests, and safer sharing habits in plain language.\"}},{\"@type\":\"Question\",\"name\":\"Can you help with spam calls or suspicious text messages?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Yes. We can show you how to block unwanted callers, recognize common scam patterns, and avoid sharing private codes or payment information.\"}}]}",
+   "{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://macbryte.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Courses\",\"item\":\"https://macbryte.com/courses\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Phone & Social Help for Seniors\"}]}"
+  ]
+ },
+ "/course/photo-help": {
+  "slug": "course__photo-help",
+  "title": "Photo Organization Course for Seniors in Ottawa | Macbryte",
+  "description": "Patient photo organization course for seniors in Ottawa. Learn to import, organize, back up, find, edit and share digital photos safely.",
+  "ogImage": "/og-image.jpg",
+  "jsonld": [
+   "{\"@context\":\"https://schema.org\",\"@type\":\"Course\",\"name\":\"Photo Help for Seniors\",\"description\":\"Patient photo organization course for seniors in Ottawa. Learn to import, organize, back up, find, edit and share digital photos safely.\",\"url\":\"https://macbryte.com/course/photo-help\",\"provider\":{\"@type\":\"Organization\",\"name\":\"Macbryte\",\"url\":\"https://macbryte.com\"},\"audience\":{\"@type\":\"Audience\",\"audienceType\":\"Seniors and beginners\"},\"areaServed\":[{\"@type\":\"City\",\"name\":\"Ottawa\"},{\"@type\":\"City\",\"name\":\"Kanata\"},{\"@type\":\"City\",\"name\":\"Barrhaven\"},{\"@type\":\"City\",\"name\":\"Nepean\"}]}",
+   "{\"@context\":\"https://schema.org\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"Can you help with iPhone, iPad, Mac, Windows, iCloud, or Google Photos?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Yes. We can help you understand the photo system you already use and decide whether it needs to be simplified.\"}},{\"@type\":\"Question\",\"name\":\"Will you delete photos for me?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"We do not rush deletion. We help you review, copy, back up, and organize first so you feel safe before removing anything.\"}},{\"@type\":\"Question\",\"name\":\"Can you help me share photos with family?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Yes. We can practise email, text message, shared albums, AirDrop, WhatsApp, or cloud links depending on what your family uses.\"}}]}",
+   "{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://macbryte.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Courses\",\"item\":\"https://macbryte.com/courses\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Photo Help for Seniors\"}]}"
+  ]
+ },
+ "/course/video-calls": {
+  "slug": "course__video-calls",
+  "title": "Video Calling Course for Seniors in Ottawa | Macbryte",
+  "description": "Patient video calling course for seniors in Ottawa. Learn Zoom, FaceTime, WhatsApp, links, camera, microphone, screen sharing and safety.",
+  "ogImage": "/og-image.jpg",
+  "jsonld": [
+   "{\"@context\":\"https://schema.org\",\"@type\":\"Course\",\"name\":\"Video Calls for Seniors\",\"description\":\"Patient video calling course for seniors in Ottawa. Learn Zoom, FaceTime, WhatsApp, links, camera, microphone, screen sharing and safety.\",\"url\":\"https://macbryte.com/course/video-calls\",\"provider\":{\"@type\":\"Organization\",\"name\":\"Macbryte\",\"url\":\"https://macbryte.com\"},\"audience\":{\"@type\":\"Audience\",\"audienceType\":\"Seniors and beginners\"},\"areaServed\":[{\"@type\":\"City\",\"name\":\"Ottawa\"},{\"@type\":\"City\",\"name\":\"Kanata\"},{\"@type\":\"City\",\"name\":\"Barrhaven\"},{\"@type\":\"City\",\"name\":\"Nepean\"}]}",
+   "{\"@context\":\"https://schema.org\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"Can you help with Zoom, FaceTime, and WhatsApp?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Yes. We can help with Zoom, FaceTime, WhatsApp, Google Meet, Teams, and the video calling app your family or group already uses.\"}},{\"@type\":\"Question\",\"name\":\"Can I practise before an important appointment or family call?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Yes. Practise calls are one of the best ways to reduce stress before a medical appointment, class, family event, or community meeting.\"}},{\"@type\":\"Question\",\"name\":\"Can you fix camera or microphone problems?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"We can help troubleshoot common camera, microphone, speaker, permission, Wi\u2011Fi, and app settings that prevent calls from working properly.\"}}]}",
+   "{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://macbryte.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Courses\",\"item\":\"https://macbryte.com/courses\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Video Calls for Seniors\"}]}"
+  ]
+ },
+ "/blog": {
+  "slug": "blog",
+  "title": "Tech Tips & Blog \u2014 Macbryte Computer Coaching Ottawa Area",
+  "description": "Practical computer tips for seniors and beginners from Macbryte's Ottawa-area coaches in Ottawa, Nepean, Kanata, Barrhaven. Learn online safety, video calling, photo organization, and more.",
+  "ogImage": "/og-image.jpg",
+  "jsonld": [
+   "{\"@context\":\"https://schema.org\",\"@type\":\"Blog\",\"name\":\"Macbryte Tech Tips & Blog\",\"description\":\"Practical computer tips for seniors and beginners from Macbryte's Ottawa-area coaches.\",\"url\":\"https://macbryte.com/blog\",\"blogPost\":[{\"@type\":\"BlogPosting\",\"headline\":\"5 Simple Tips to Stay Safe Online\",\"url\":\"https://macbryte.com/blog/stay-safe-online\",\"datePublished\":\"2026-07-03\",\"dateModified\":\"2026-07-03\"},{\"@type\":\"BlogPosting\",\"headline\":\"Mac vs. PC: Which Computer Is Right for You?\",\"url\":\"https://macbryte.com/blog/mac-vs-pc-which-is-right-for-you\",\"datePublished\":\"2026-06-28\",\"dateModified\":\"2026-06-28\"},{\"@type\":\"BlogPosting\",\"headline\":\"How to Video Call Your Grandkids (Step by Step)\",\"url\":\"https://macbryte.com/blog/video-calling-your-grandkids\",\"datePublished\":\"2026-06-20\",\"dateModified\":\"2026-06-20\"},{\"@type\":\"BlogPosting\",\"headline\":\"Organize Your Digital Photos in 30 Minutes\",\"url\":\"https://macbryte.com/blog/organize-digital-photos\",\"datePublished\":\"2026-06-15\",\"dateModified\":\"2026-06-15\"},{\"@type\":\"BlogPosting\",\"headline\":\"How to Use Facebook to See Photos of Your Grandkids\",\"url\":\"https://macbryte.com/blog/how-to-use-facebook-for-grandkids-photos\",\"datePublished\":\"2026-07-07\",\"dateModified\":\"2026-07-07\"},{\"@type\":\"BlogPosting\",\"headline\":\"How to Spot a Scam Email (And What to Do About It)\",\"url\":\"https://macbryte.com/blog/how-to-spot-scam-emails\",\"datePublished\":\"2026-07-10\",\"dateModified\":\"2026-07-10\"},{\"@type\":\"BlogPosting\",\"headline\":\"A Beginner's Guide to Online Shopping\",\"url\":\"https://macbryte.com/blog/beginner-guide-online-shopping\",\"datePublished\":\"2026-07-13\",\"dateModified\":\"2026-07-13\"},{\"@type\":\"BlogPosting\",\"headline\":\"How to Back Up Your Computer (And Why You Should)\",\"url\":\"https://macbryte.com/blog/how-to-back-up-your-computer\",\"datePublished\":\"2026-07-16\",\"dateModified\":\"2026-07-16\"},{\"@type\":\"BlogPosting\",\"headline\":\"iPad Basics: A Step-by-Step Guide for Beginners\",\"url\":\"https://macbryte.com/blog/ipad-basics-for-seniors\",\"datePublished\":\"2026-07-19\",\"dateModified\":\"2026-07-19\"},{\"@type\":\"BlogPosting\",\"headline\":\"Zoom vs. FaceTime vs. WhatsApp: Which Video Call App Should You Use?\",\"url\":\"https://macbryte.com/blog/zoom-vs-facetime-vs-whatsapp\",\"datePublished\":\"2026-07-22\",\"dateModified\":\"2026-07-22\"}]}",
+   "{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://macbryte.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Tech Tips & Blog\"}]}"
+  ]
+ },
+ "/blog/stay-safe-online": {
+  "slug": "blog__stay-safe-online",
+  "title": "5 Simple Tips to Stay Safe Online | Macbryte",
+  "description": "A gentle guide to protecting your personal information without feeling overwhelmed by technology. Ottawa-area computer coaching tips from Macbryte.",
+  "ogImage": "/blog-og/stay-safe-online.jpg",
+  "jsonld": [
+   "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"5 Simple Tips to Stay Safe Online\",\"description\":\"A gentle guide to protecting your personal information without feeling overwhelmed by technology. Ottawa-area computer coaching tips from Macbryte.\",\"image\":\"https://macbryte.com/blog-og/stay-safe-online.png\",\"mainEntityOfPage\":\"https://macbryte.com/blog/stay-safe-online\",\"author\":{\"@type\":\"Organization\",\"name\":\"Macbryte\",\"url\":\"https://macbryte.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Macbryte\",\"url\":\"https://macbryte.com\"},\"datePublished\":\"2026-07-03\",\"dateModified\":\"2026-07-03\"}",
+   "{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://macbryte.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Tech Tips & Blog\",\"item\":\"https://macbryte.com/blog\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"5 Simple Tips to Stay Safe Online\"}]}"
+  ]
+ },
+ "/blog/mac-vs-pc-which-is-right-for-you": {
+  "slug": "blog__mac-vs-pc-which-is-right-for-you",
+  "title": "Mac vs. PC: Which Computer Is Right for You? | Macbryte",
+  "description": "A straightforward comparison to help you choose between a Mac and a Windows PC \u2014 no jargon, just what matters. Ottawa-area computer coaching tips from Macbryte.",
+  "ogImage": "/blog-og/mac-vs-pc-which-is-right-for-you.jpg",
+  "jsonld": [
+   "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Mac vs. PC: Which Computer Is Right for You?\",\"description\":\"A straightforward comparison to help you choose between a Mac and a Windows PC \u2014 no jargon, just what matters. Ottawa-area computer coaching tips from Macbryte.\",\"image\":\"https://macbryte.com/blog-og/mac-vs-pc-which-is-right-for-you.png\",\"mainEntityOfPage\":\"https://macbryte.com/blog/mac-vs-pc-which-is-right-for-you\",\"author\":{\"@type\":\"Organization\",\"name\":\"Macbryte\",\"url\":\"https://macbryte.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Macbryte\",\"url\":\"https://macbryte.com\"},\"datePublished\":\"2026-06-28\",\"dateModified\":\"2026-06-28\"}",
+   "{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://macbryte.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Tech Tips & Blog\",\"item\":\"https://macbryte.com/blog\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Mac vs. PC: Which Computer Is Right for You?\"}]}"
+  ]
+ },
+ "/blog/video-calling-your-grandkids": {
+  "slug": "blog__video-calling-your-grandkids",
+  "title": "How to Video Call Your Grandkids (Step by Step) | Macbryte",
+  "description": "A simple, no-stress guide to setting up video calls so you can see those little faces \u2014 and they can see yours.",
+  "ogImage": "/blog-og/video-calling-your-grandkids.jpg",
+  "jsonld": [
+   "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"How to Video Call Your Grandkids (Step by Step)\",\"description\":\"A simple, no-stress guide to setting up video calls so you can see those little faces \u2014 and they can see yours.\",\"image\":\"https://macbryte.com/blog-og/video-calling-your-grandkids.png\",\"mainEntityOfPage\":\"https://macbryte.com/blog/video-calling-your-grandkids\",\"author\":{\"@type\":\"Organization\",\"name\":\"Macbryte\",\"url\":\"https://macbryte.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Macbryte\",\"url\":\"https://macbryte.com\"},\"datePublished\":\"2026-06-20\",\"dateModified\":\"2026-06-20\"}",
+   "{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://macbryte.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Tech Tips & Blog\",\"item\":\"https://macbryte.com/blog\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"How to Video Call Your Grandkids (Step by Step)\"}]}"
+  ]
+ },
+ "/blog/organize-digital-photos": {
+  "slug": "blog__organize-digital-photos",
+  "title": "Organize Your Digital Photos in 30 Minutes | Macbryte",
+  "description": "Tired of hunting through thousands of photos to find that one special picture? Here's a simple system that works.",
+  "ogImage": "/blog-og/organize-digital-photos.jpg",
+  "jsonld": [
+   "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Organize Your Digital Photos in 30 Minutes\",\"description\":\"Tired of hunting through thousands of photos to find that one special picture? Here's a simple system that works.\",\"image\":\"https://macbryte.com/blog-og/organize-digital-photos.png\",\"mainEntityOfPage\":\"https://macbryte.com/blog/organize-digital-photos\",\"author\":{\"@type\":\"Organization\",\"name\":\"Macbryte\",\"url\":\"https://macbryte.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Macbryte\",\"url\":\"https://macbryte.com\"},\"datePublished\":\"2026-06-15\",\"dateModified\":\"2026-06-15\"}",
+   "{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://macbryte.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Tech Tips & Blog\",\"item\":\"https://macbryte.com/blog\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Organize Your Digital Photos in 30 Minutes\"}]}"
+  ]
+ },
+ "/blog/how-to-use-facebook-for-grandkids-photos": {
+  "slug": "blog__how-to-use-facebook-for-grandkids-photos",
+  "title": "How to Use Facebook to See Photos of Your Grandkids | Macbryte",
+  "description": "A gentle guide to finding and enjoying family photos on Facebook \u2014 without getting lost in the news feed. Ottawa-area computer coaching tips from Macbryte.",
+  "ogImage": "/blog-og/how-to-use-facebook-for-grandkids-photos.jpg",
+  "jsonld": [
+   "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"How to Use Facebook to See Photos of Your Grandkids\",\"description\":\"A gentle guide to finding and enjoying family photos on Facebook \u2014 without getting lost in the news feed. Ottawa-area computer coaching tips from Macbryte.\",\"image\":\"https://macbryte.com/blog-og/how-to-use-facebook-for-grandkids-photos.png\",\"mainEntityOfPage\":\"https://macbryte.com/blog/how-to-use-facebook-for-grandkids-photos\",\"author\":{\"@type\":\"Organization\",\"name\":\"Macbryte\",\"url\":\"https://macbryte.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Macbryte\",\"url\":\"https://macbryte.com\"},\"datePublished\":\"2026-07-07\",\"dateModified\":\"2026-07-07\"}",
+   "{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://macbryte.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Tech Tips & Blog\",\"item\":\"https://macbryte.com/blog\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"How to Use Facebook to See Photos of Your Grandkids\"}]}"
+  ]
+ },
+ "/blog/how-to-spot-scam-emails": {
+  "slug": "blog__how-to-spot-scam-emails",
+  "title": "How to Spot a Scam Email (And What to Do About It) | Macbryte",
+  "description": "Scam emails are getting more convincing. Here's how to spot them \u2014 and what to do if you accidentally click something suspicious.",
+  "ogImage": "/blog-og/how-to-spot-scam-emails.jpg",
+  "jsonld": [
+   "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"How to Spot a Scam Email (And What to Do About It)\",\"description\":\"Scam emails are getting more convincing. Here's how to spot them \u2014 and what to do if you accidentally click something suspicious.\",\"image\":\"https://macbryte.com/blog-og/how-to-spot-scam-emails.png\",\"mainEntityOfPage\":\"https://macbryte.com/blog/how-to-spot-scam-emails\",\"author\":{\"@type\":\"Organization\",\"name\":\"Macbryte\",\"url\":\"https://macbryte.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Macbryte\",\"url\":\"https://macbryte.com\"},\"datePublished\":\"2026-07-10\",\"dateModified\":\"2026-07-10\"}",
+   "{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://macbryte.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Tech Tips & Blog\",\"item\":\"https://macbryte.com/blog\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"How to Spot a Scam Email (And What to Do About It)\"}]}"
+  ]
+ },
+ "/blog/beginner-guide-online-shopping": {
+  "slug": "blog__beginner-guide-online-shopping",
+  "title": "A Beginner's Guide to Online Shopping | Macbryte",
+  "description": "Online shopping can feel confusing at first. Here's everything you need to know to shop safely and confidently from home.",
+  "ogImage": "/blog-og/beginner-guide-online-shopping.jpg",
+  "jsonld": [
+   "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"A Beginner's Guide to Online Shopping\",\"description\":\"Online shopping can feel confusing at first. Here's everything you need to know to shop safely and confidently from home.\",\"image\":\"https://macbryte.com/blog-og/beginner-guide-online-shopping.png\",\"mainEntityOfPage\":\"https://macbryte.com/blog/beginner-guide-online-shopping\",\"author\":{\"@type\":\"Organization\",\"name\":\"Macbryte\",\"url\":\"https://macbryte.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Macbryte\",\"url\":\"https://macbryte.com\"},\"datePublished\":\"2026-07-13\",\"dateModified\":\"2026-07-13\"}",
+   "{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://macbryte.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Tech Tips & Blog\",\"item\":\"https://macbryte.com/blog\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"A Beginner's Guide to Online Shopping\"}]}"
+  ]
+ },
+ "/blog/how-to-back-up-your-computer": {
+  "slug": "blog__how-to-back-up-your-computer",
+  "title": "How to Back Up Your Computer (And Why You Should) | Macbryte",
+  "description": "Your photos, documents, and memories are precious. A backup keeps them safe even if something happens to your computer.",
+  "ogImage": "/blog-og/how-to-back-up-your-computer.jpg",
+  "jsonld": [
+   "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"How to Back Up Your Computer (And Why You Should)\",\"description\":\"Your photos, documents, and memories are precious. A backup keeps them safe even if something happens to your computer.\",\"image\":\"https://macbryte.com/blog-og/how-to-back-up-your-computer.png\",\"mainEntityOfPage\":\"https://macbryte.com/blog/how-to-back-up-your-computer\",\"author\":{\"@type\":\"Organization\",\"name\":\"Macbryte\",\"url\":\"https://macbryte.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Macbryte\",\"url\":\"https://macbryte.com\"},\"datePublished\":\"2026-07-16\",\"dateModified\":\"2026-07-16\"}",
+   "{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://macbryte.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Tech Tips & Blog\",\"item\":\"https://macbryte.com/blog\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"How to Back Up Your Computer (And Why You Should)\"}]}"
+  ]
+ },
+ "/blog/ipad-basics-for-seniors": {
+  "slug": "blog__ipad-basics-for-seniors",
+  "title": "iPad Basics: A Step-by-Step Guide for Beginners | Macbryte",
+  "description": "New to iPad? This gentle guide walks you through the basics \u2014 from turning it on to downloading your first app.",
+  "ogImage": "/blog-og/ipad-basics-for-seniors.jpg",
+  "jsonld": [
+   "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"iPad Basics: A Step-by-Step Guide for Beginners\",\"description\":\"New to iPad? This gentle guide walks you through the basics \u2014 from turning it on to downloading your first app.\",\"image\":\"https://macbryte.com/blog-og/ipad-basics-for-seniors.png\",\"mainEntityOfPage\":\"https://macbryte.com/blog/ipad-basics-for-seniors\",\"author\":{\"@type\":\"Organization\",\"name\":\"Macbryte\",\"url\":\"https://macbryte.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Macbryte\",\"url\":\"https://macbryte.com\"},\"datePublished\":\"2026-07-19\",\"dateModified\":\"2026-07-19\"}",
+   "{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://macbryte.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Tech Tips & Blog\",\"item\":\"https://macbryte.com/blog\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"iPad Basics: A Step-by-Step Guide for Beginners\"}]}"
+  ]
+ },
+ "/blog/zoom-vs-facetime-vs-whatsapp": {
+  "slug": "blog__zoom-vs-facetime-vs-whatsapp",
+  "title": "Zoom vs FaceTime vs WhatsApp for Seniors | Macbryte",
+  "description": "Not sure which video calling app to use? We compare the three most popular options so you can pick the right one.",
+  "ogImage": "/blog-og/zoom-vs-facetime-vs-whatsapp.jpg",
+  "jsonld": [
+   "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Zoom vs. FaceTime vs. WhatsApp: Which Video Call App Should You Use?\",\"description\":\"Not sure which video calling app to use? We compare the three most popular options so you can pick the right one.\",\"image\":\"https://macbryte.com/blog-og/zoom-vs-facetime-vs-whatsapp.png\",\"mainEntityOfPage\":\"https://macbryte.com/blog/zoom-vs-facetime-vs-whatsapp\",\"author\":{\"@type\":\"Organization\",\"name\":\"Macbryte\",\"url\":\"https://macbryte.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Macbryte\",\"url\":\"https://macbryte.com\"},\"datePublished\":\"2026-07-22\",\"dateModified\":\"2026-07-22\"}",
+   "{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://macbryte.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Tech Tips & Blog\",\"item\":\"https://macbryte.com/blog\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Zoom vs. FaceTime vs. WhatsApp: Which Video Call App Should You Use?\"}]}"
+  ]
+ },
+ "/blog/how-to-create-strong-passwords": {
+  "slug": "blog__how-to-create-strong-passwords",
+  "title": "How to Create Strong Passwords | Macbryte",
+  "description": "Stop trying to remember complicated passwords. There's an easier way to keep your accounts safe. Ottawa-area computer coaching tips from Macbryte.",
+  "ogImage": "/blog-og/how-to-create-strong-passwords.jpg",
+  "jsonld": [
+   "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"How to Create Strong Passwords (Without Memorizing a Thing)\",\"description\":\"Stop trying to remember complicated passwords. There's an easier way to keep your accounts safe. Ottawa-area computer coaching tips from Macbryte.\",\"image\":\"https://macbryte.com/blog-og/how-to-create-strong-passwords.png\",\"mainEntityOfPage\":\"https://macbryte.com/blog/how-to-create-strong-passwords\",\"author\":{\"@type\":\"Organization\",\"name\":\"Macbryte\",\"url\":\"https://macbryte.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Macbryte\",\"url\":\"https://macbryte.com\"},\"datePublished\":\"2026-07-25\",\"dateModified\":\"2026-07-25\"}",
+   "{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://macbryte.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Tech Tips & Blog\",\"item\":\"https://macbryte.com/blog\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"How to Create Strong Passwords (Without Memorizing a Thing)\"}]}"
+  ]
+ },
+ "/blog/how-to-use-google-maps": {
+  "slug": "blog__how-to-use-google-maps",
+  "title": "How to Use Google Maps to Get Around | Macbryte",
+  "description": "Never get lost again. Google Maps can help you find addresses, avoid traffic, and explore new places \u2014 all from your phone or computer.",
+  "ogImage": "/blog-og/how-to-use-google-maps.jpg",
+  "jsonld": [
+   "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"How to Use Google Maps to Get Around\",\"description\":\"Never get lost again. Google Maps can help you find addresses, avoid traffic, and explore new places \u2014 all from your phone or computer.\",\"image\":\"https://macbryte.com/blog-og/how-to-use-google-maps.png\",\"mainEntityOfPage\":\"https://macbryte.com/blog/how-to-use-google-maps\",\"author\":{\"@type\":\"Organization\",\"name\":\"Macbryte\",\"url\":\"https://macbryte.com\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Macbryte\",\"url\":\"https://macbryte.com\"},\"datePublished\":\"2026-07-28\",\"dateModified\":\"2026-07-28\"}",
+   "{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://macbryte.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Tech Tips & Blog\",\"item\":\"https://macbryte.com/blog\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"How to Use Google Maps to Get Around\"}]}"
+  ]
+ },
+ "/terms": {
+  "slug": "terms",
+  "title": "Terms of Service | Macbryte",
+  "description": "Read the Macbryte terms of service covering coaching sessions, payments, cancellations, and site usage.",
+  "ogImage": "",
+  "jsonld": []
+ },
+ "/privacy": {
+  "slug": "privacy",
+  "title": "Privacy Policy | Macbryte",
+  "description": "Learn how Macbryte handles personal information shared through the website, booking forms, and coaching sessions.",
+  "ogImage": "",
+  "jsonld": []
+ },
+ "/cookies": {
+  "slug": "cookies",
+  "title": "Cookie Policy | Macbryte",
+  "description": "Read about the cookies and similar technologies used on the Macbryte website.",
+  "ogImage": "",
+  "jsonld": []
+ }
+}

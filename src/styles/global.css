@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { @apply border-border; }
+  html { font-size: 17px; scroll-behavior: smooth; }
+  body { @apply bg-[#F7F7FA] text-foreground font-outfit antialiased overflow-x-hidden; }
+  .text-sm { font-size: 15px !important; }
+  h1 { @apply text-3xl md:text-4xl lg:text-5xl font-bold; }
+  h2 { @apply text-2xl md:text-3xl lg:text-4xl font-semibold; }
+  h3 { @apply text-xl md:text-2xl font-semibold; }
+  p { @apply text-base md:text-lg; }
+  a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+    outline: 3px solid #6B5CE7; outline-offset: 2px;
+  }
+  .pricing-card { @apply bg-white rounded-2xl shadow-lg p-4 md:p-6 flex flex-col h-full; }
+  .pricing-card.featured { @apply bg-coral text-white; }
+  .feature-icon { @apply w-10 h-10 rounded-full flex items-center justify-center text-white; }
+  .stat-card { @apply flex flex-col items-center p-4 md:p-6; }
+  .feature-card { @apply bg-white rounded-2xl p-4 md:p-6 shadow-lg hover:shadow-xl transition-all duration-300; }
+  details > summary::-webkit-details-marker { display: none; }
+}
+
+/* Blog article body (was rendered from HTML strings in the old app) */
+.prose-mb h2 { @apply text-2xl font-bold mt-10 mb-4; }
+.prose-mb h3 { @apply text-xl font-semibold mt-8 mb-3; }
+.prose-mb p { @apply mb-5 leading-relaxed text-gray-700; }
+.prose-mb ul { @apply list-disc pl-6 mb-5 space-y-2 text-gray-700; }
+.prose-mb ol { @apply list-decimal pl-6 mb-5 space-y-2 text-gray-700; }
+.prose-mb a { @apply text-[#6B5CE7] underline; }

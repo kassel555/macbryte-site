@@ -1,0 +1,14 @@
+---
+import Base from '../layouts/Base.astro';
+import { site } from '../data/site';
+---
+<Base title="Page not found | Macbryte" description="That page could not be found." path="/404" noindex>
+  <section class="px-4 py-20 text-center max-w-2xl mx-auto">
+    <h1 class="text-gray-900 mb-5">Sorry, we can't find that page</h1>
+    <p class="text-xl text-gray-700 mb-8">Try the home page, or give us a call and we'll help.</p>
+    <div class="flex flex-col sm:flex-row gap-3 justify-center">
+      <a href="/" class="rounded-full border-2 border-gray-900 font-semibold px-7 py-4 text-lg">Home page</a>
+      <a href={site.phoneHref} class="rounded-full bg-coral-dark text-white font-semibold px-7 py-4 text-lg">Call {site.phone}</a>
+    </div>
+  </section>
+</Base>

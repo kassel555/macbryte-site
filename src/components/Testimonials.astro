@@ -1,0 +1,20 @@
+---
+import { testimonials } from '../data/site';
+const { count = 3, heading = 'What students say' } = Astro.props;
+const items = testimonials.slice(0, count);
+---
+<section class="py-14 px-4 md:px-8 bg-white">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-center mb-10 text-gray-900">{heading}</h2>
+    <div class="grid gap-6 md:grid-cols-3">
+      {items.map((t) => (
+        <figure class="bg-[#f8f7fc] rounded-2xl p-6 flex flex-col">
+          <div class="text-yellow-dark text-xl mb-3" aria-label="5 stars">★★★★★</div>
+          <blockquote class="text-gray-700 text-[17px] leading-relaxed flex-grow">“{t.quote}”</blockquote>
+          <figcaption class="mt-5 font-semibold text-gray-900">{t.name} <span class="font-normal text-gray-500">· {t.device}</span></figcaption>
+        </figure>
+      ))}
+    </div>
+    <p class="text-center mt-8"><a href="/happy-students" class="font-semibold text-[#6B5CE7] hover:underline">Read all 17 student stories →</a></p>
+  </div>
+</section>

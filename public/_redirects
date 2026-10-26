@@ -1,0 +1,19 @@
+# Canonical host
+http://macbryte.com/*        https://macbryte.com/:splat  301!
+http://www.macbryte.com/*    https://macbryte.com/:splat  301!
+https://www.macbryte.com/*   https://macbryte.com/:splat  301!
+
+# URL used by the interim site -> the real lessons page
+/computer-training           /computer-lessons-for-seniors  301
+/computer-training/          /computer-lessons-for-seniors  301
+
+# Retired app routes
+/courses                     /what-you-learn  301
+/dashboard                   /what-you-learn  301
+/auth                        /                301
+/success                     /thanks          301
+/reviews                     /happy-students  301
+
+
+# Sitemap
+/sitemap.xml   /sitemap-index.xml  301

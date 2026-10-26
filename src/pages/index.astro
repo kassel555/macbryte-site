@@ -1,679 +1,172 @@
 ---
-// index.astro - Homepage
 import Base from '../layouts/Base.astro';
-import CTA from '../components/CTA.astro';
-import businessData from '../data/business.json';
+import Testimonials from '../components/Testimonials.astro';
+import FirstStep from '../components/FirstStep.astro';
+import { site, services } from '../data/site';
 
-const business = businessData.business;
-const services = businessData.services;
+const title = 'Computer Lessons for Seniors in Ottawa — Mac or PC | Macbryte';
+const description = 'Patient one-on-one computer lessons for seniors and beginners in Ottawa, Kanata, Nepean and Barrhaven. Mac, PC, iPad and iPhone — at home or online. Call 613-702-7712.';
+
+const areas = [
+  ['/computer-coaching-ottawa', 'Ottawa'], ['/computer-coaching-kanata', 'Kanata'],
+  ['/computer-coaching-barrhaven', 'Barrhaven'], ['/computer-coaching-nepean', 'Nepean'],
+];
+
+const faqs = [
+  { q: 'Do you teach Mac or PC?', a: 'Both. Many students use a Mac, iPad or iPhone, and we teach Windows PCs too. We work on the device you already own.' },
+  { q: 'What areas do you serve?', a: 'Ottawa, Kanata, Nepean and Barrhaven, in your home. Online lessons are available anywhere.' },
+  { q: 'Do I need any experience?', a: 'None at all. Lessons go at your pace, in plain language, and you can ask the same question as many times as you need.' },
+  { q: 'How much does it cost?', a: 'Lessons are $85 per hour, with savings on 4, 8 and 12-hour packages. The first phone call is free.' },
+  { q: 'What should I have ready for the first lesson?', a: 'Your device, its charger, and any passwords you know. If you are not sure of a password, that is fine — we can sort it out together.' },
+  { q: 'Can a family member book for me?', a: 'Yes. Many first calls come from a son or daughter. We will talk with you both and plan lessons around what you want to learn.' },
+];
+
+const posts = [
+  ['/blog/mac-vs-pc-which-is-right-for-you', 'Mac vs. PC: Which computer is right for you?'],
+  ['/blog/how-to-spot-scam-emails', 'How to spot a scam email (and what to do about it)'],
+  ['/blog/video-calling-your-grandkids', 'How to video call your grandkids, step by step'],
+];
+
+const jsonld = [
+  JSON.stringify({
+    '@context': 'https://schema.org', '@type': 'LocalBusiness', name: 'Macbryte',
+    description: 'One-on-one computer lessons for seniors and beginners — Mac, PC, iPad and iPhone — in Ottawa, Kanata, Nepean and Barrhaven.',
+    url: site.url, telephone: '+1-613-702-7712', email: site.email, image: site.url + '/og-image.jpg', priceRange: '$85–$925',
+    address: { '@type': 'PostalAddress', addressLocality: 'Ottawa', addressRegion: 'ON', addressCountry: 'CA' },
+    areaServed: site.areas.map((name) => ({ '@type': 'City', name })),
+  }),
+  JSON.stringify({
+    '@context': 'https://schema.org', '@type': 'FAQPage',
+    mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+  }),
+];
 ---
+<Base title={title} description={description} path="/" jsonld={jsonld}>
+  <!-- Hero -->
+  <section class="px-4 md:px-8 pt-12 pb-14 md:pt-20 md:pb-20 bg-gradient-to-b from-white to-[#f2f1fa]">
+    <div class="max-w-6xl mx-auto grid gap-12 md:grid-cols-[1.25fr_1fr] items-center">
+      <div>
+        <p class="text-coral-dark font-semibold uppercase tracking-wide text-sm mb-4">Ottawa · Kanata · Nepean · Barrhaven</p>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-gray-900 mb-6">
+          Patient computer lessons, <span class="text-coral-dark whitespace-nowrap">one-on-one</span>.
+        </h1>
+        <p class="text-xl text-gray-700 mb-8 max-w-xl">For seniors and anyone who wants technology to make life easier. Mac or PC, iPad or iPhone — at your kitchen table or online, at your own pace.</p>
+        <div class="flex flex-col sm:flex-row gap-3 mb-4">
+          <a href={site.phoneHref} class="inline-flex justify-center items-center gap-2 rounded-full bg-coral-dark hover:bg-coral text-white font-semibold px-8 py-4 text-xl">
+            <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Call {site.phone}
+          </a>
+          <a href="/contact" class="inline-flex justify-center items-center rounded-full border-2 border-gray-900 text-gray-900 font-semibold px-8 py-4 text-xl hover:bg-gray-900 hover:text-white">Request a callback</a>
+        </div>
+        <p class="text-gray-600">The first 15-minute call is free. No technical knowledge needed.</p>
+      </div>
 
-<Base
-  title={business.name}
-  description={business.description}
-  schemaType="LocalBusiness"
->
-  <!-- Hero Section -->
-  <section class="hero" aria-labelledby="hero-heading">
-    <div class="container hero-inner">
-      <div class="hero-content">
-        <p class="hero-badge">Personalized Technology Coaching for Seniors</p>
-        <h1 id="hero-heading">Learn Computers with Your Own Personal Coach</h1>
-        <p class="hero-description">
-          One-on-one computer and iPad/iPhone coaching for seniors and beginners in Ottawa, Barrhaven, Nepean, and Kanata. 
-          In-home or virtual. No contracts. No jargon. Just patient, personalized learning at your pace.
-        </p>
-        <CTA variant="primary" />
-        
-        <div class="hero-stats" aria-label="Key statistics">
-          <div class="stat">
-            <span class="stat-number">75+</span>
-            <span class="stat-label">Students Taught</span>
-          </div>
-          <div class="stat">
-            <span class="stat-number">800+</span>
-            <span class="stat-label">Teaching Hours</span>
-          </div>
-          <div class="stat">
-            <span class="stat-number">4.9★</span>
-            <span class="stat-label">Average Rating</span>
-          </div>
-          <div class="stat">
-            <span class="stat-number">100%</span>
-            <span class="stat-label">Focus on You</span>
+      <!-- Coach card -->
+      <aside class="bg-white rounded-3xl shadow-xl p-7">
+        <div class="flex items-center gap-4 mb-5">
+          {site.coach.photo
+            ? <img src={site.coach.photo} alt={`${site.coach.name}, your Macbryte coach`} width="88" height="88" class="w-20 h-20 rounded-full object-cover" />
+            : <div class="w-20 h-20 rounded-full bg-[#f2f1fa] text-[#6B5CE7] text-3xl font-bold flex items-center justify-center" aria-hidden="true">{site.coach.name[0]}</div>}
+          <div>
+            <p class="text-sm text-gray-500 uppercase tracking-wide">Your coach</p>
+            <p class="text-2xl font-bold text-gray-900">{site.coach.name}</p>
+            <p class="text-gray-600">Founder of Macbryte</p>
           </div>
         </div>
-      </div>
-      
-      <div class="hero-image" aria-hidden="true">
-        <div class="hero-illustration">
-          <svg viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <!-- iPad illustration -->
-            <rect x="50" y="40" width="140" height="180" rx="12" stroke="#1e40af" stroke-width="3"/>
-            <rect x="60" y="55" width="120" height="150" rx="6" fill="#f0f4ff"/>
-            <rect x="70" y="70" width="100" height="15" rx="3" fill="#1e40af" opacity="0.3"/>
-            <rect x="70" y="95" width="100" height="80" rx="4" fill="#e0e7ff"/>
-            <circle cx="120" cy="200" r="8" stroke="#1e40af" stroke-width="2" fill="white"/>
-            
-            <!-- Person -->
-            <circle cx="300" cy="100" r="30" fill="#fef3c7"/>
-            <ellipse cx="300" cy="180" rx="40" ry="50" fill="#fde68a"/>
-            <ellipse cx="270" cy="90" rx="8" ry="10" fill="#1e40af" opacity="0.3"/>
-            <ellipse cx="330" cy="90" rx="8" ry="10" fill="#1e40af" opacity="0.3"/>
-            <path d="M285 110 Q300 120 315 110" stroke="#1e40af" stroke-width="2" fill="none" stroke-linecap="round"/>
-            
-            <!-- Connection lines -->
-            <path d="M190 130 Q245 100 260 100" stroke="#1e40af" stroke-width="2" fill="none" stroke-dasharray="5,5" opacity="0.5"/>
-            <circle cx="260" cy="100" r="4" fill="#1e40af"/>
-          </svg>
-        </div>
-      </div>
+        <p class="text-gray-700 mb-6">One student at a time, on the device you already own. Lessons go slowly, steps get written down, and anything can be repeated as often as you like.</p>
+        <dl class="grid grid-cols-2 gap-4 text-center">
+          <div class="bg-[#f8f7fc] rounded-2xl py-4"><dt class="text-gray-600 text-sm">Students taught</dt><dd class="text-3xl font-bold text-coral-dark">{site.stats.students}</dd></div>
+          <div class="bg-[#f8f7fc] rounded-2xl py-4"><dt class="text-gray-600 text-sm">Hours of lessons</dt><dd class="text-3xl font-bold text-coral-dark">{site.stats.hours}</dd></div>
+        </dl>
+      </aside>
     </div>
   </section>
 
-  <!-- Services Overview -->
-  <section class="services-overview" aria-labelledby="services-heading">
-    <div class="container">
-      <header class="section-header">
-        <h2 id="services-heading">What I Help With</h2>
-        <p>Personalized coaching on the topics that matter to you</p>
-        <a href="/services" class="section-link">View All Services →</a>
-      </header>
-      
-      <div class="services-grid">
-        {services.map((service: any) => (
-          <article class="service-card" data-service={service.id}>
-            <div class="service-card-icon" aria-hidden="true">{service.icon}</div>
-            <h3 class="service-card-title">{service.name}</h3>
-            <p class="service-card-description">{service.description}</p>
-            <ul class="service-card-modules">
-              {service.modules.slice(0, 3).map((module: string) => (
-                <li>{module}</li>
-              ))}
-              {service.modules.length > 3 && <li>+{service.modules.length - 3} more topics</li>}
-            </ul>
-            <a href={service.url} class="service-card-link">Learn More →</a>
-          </article>
+  <!-- Testimonials up front -->
+  <Testimonials heading="Students in their own words" />
+
+  <!-- Mac or PC -->
+  <section class="px-4 md:px-8 py-14 bg-[#f8f7fc]">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-gray-900 text-center mb-3">Mac or PC — we teach the one you have</h2>
+      <p class="text-center text-gray-600 max-w-2xl mx-auto mb-10">Bring any device. Lessons are built around what you actually want to do with it.</p>
+      <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        {[
+          ['Mac', 'MacBook, iMac or Mac mini — from the basics to Photos, Mail and Keynote.'],
+          ['Windows PC', 'Desktop or laptop — files, email, the internet and staying safe.'],
+          ['iPad', 'Gestures, apps, settings, FaceTime and keeping photos in one place.'],
+          ['iPhone & Android', 'Calls, texts, the camera, WhatsApp and avoiding scam messages.'],
+        ].map(([t, d]) => (
+          <div class="bg-white rounded-2xl p-6 shadow-sm"><h3 class="text-xl font-bold text-gray-900 mb-2">{t}</h3><p class="text-gray-600 text-base">{d}</p></div>
         ))}
       </div>
     </div>
   </section>
 
-  <!-- How It Works -->
-  <section class="how-it-works" aria-labelledby="process-heading">
-    <div class="container">
-      <header class="section-header">
-        <h2 id="process-heading">How It Works</h2>
-        <p>Simple, flexible, and built around your schedule</p>
-      </header>
-      
-      <div class="process-steps">
-        <article class="process-step">
-          <div class="process-number">1</div>
-          <h3>Free Consultation</h3>
-          <p>We chat about what you want to learn — no pressure, no commitment. I'll learn about your goals and comfort level.</p>
-        </article>
-        <article class="process-step">
-          <div class="process-number">2</div>
-          <h3>Personalized Plan</h3>
-          <p>I create a lesson plan just for you. We work at your pace, repeating topics as needed until you're confident.</p>
-        </article>
-        <article class="process-step">
-          <div class="process-number">3</div>
-          <h3>Learn Your Way</h3>
-          <p>In-home or virtual sessions. You choose the time and place. Notes and practice materials included after every session.</p>
-        </article>
+  <!-- Services -->
+  <section class="px-4 md:px-8 py-14 bg-white">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-gray-900 text-center mb-3">What would you like help with?</h2>
+      <p class="text-center text-gray-600 max-w-2xl mx-auto mb-10">Popular lessons — each taught patiently, one-on-one, in plain language.</p>
+      <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        {services.map((s) => (
+          <a href={s.href} class="group bg-gray-50 hover:bg-[#f2f1fa] border border-gray-100 rounded-2xl p-6 transition-colors">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">{s.title}</h3>
+            <p class="text-gray-600 text-base mb-4">{s.text}</p>
+            <span class="font-semibold text-coral-dark group-hover:underline">Learn more →</span>
+          </a>
+        ))}
       </div>
+      <p class="text-center mt-8"><a href="/what-you-learn" class="font-semibold text-[#6B5CE7] hover:underline">See all beginner courses →</a></p>
     </div>
   </section>
 
-  <!-- About Preview -->
-  <section class="about-preview" aria-labelledby="about-heading">
-    <div class="container about-preview-inner">
-      <div class="about-preview-content">
-        <h2 id="about-heading">About MacBryte</h2>
-        <p class="about-lead">Passionate about helping you succeed with technology</p>
-        <p>
-          Hi, I'm Rahul — the coach behind MacBryte. I've spent <strong>over 800 hours</strong> helping <strong>75+ students</strong> gain confidence with technology.
-        </p>
-        <p>
-          Whether you want to video call your grandchildren, manage your finances online, or simply understand your device better, I'll help you get there. 
-          Serving Ottawa, Barrhaven, Nepean, and Kanata.
-        </p>
-        <a href="/about" class="btn btn-secondary">Learn More About Rahul →</a>
-      </div>
-      <div class="about-preview-image" aria-hidden="true">
-        <div class="about-illustration">
-          <svg viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="150" cy="150" r="130" stroke="#eff6ff" stroke-width="4"/>
-            <circle cx="150" cy="110" r="35" fill="#fef3c7"/>
-            <ellipse cx="150" cy="200" rx="50" ry="60" fill="#fde68a"/>
-            <ellipse cx="130" cy="100" rx="10" ry="12" fill="#1e40af" opacity="0.3"/>
-            <ellipse cx="170" cy="100" rx="10" ry="12" fill="#1e40af" opacity="0.3"/>
-            <path d="M135 125 Q150 135 165 125" stroke="#1e40af" stroke-width="3" fill="none" stroke-linecap="round"/>
-            <text x="150" y="280" text-anchor="middle" font-size="14" fill="#6b7280" font-family="Inter, sans-serif">Rahul</text>
-          </svg>
-        </div>
-      </div>
-    </div>
-  </section>
+  <FirstStep />
 
-  <!-- Testimonials -->
-  <section class="testimonials" aria-labelledby="testimonials-heading">
-    <div class="container">
-      <header class="section-header">
-        <h2 id="testimonials-heading">What Students Say</h2>
-        <p>Rated 4.9★ by students and families</p>
-      </header>
-      
-      <div class="testimonials-grid">
-        {business.reviews.map((review: any) => (
-          <blockquote class="testimonial-card">
-            <div class="stars" aria-label={`${review.ratingValue} out of 5 stars`}>
-              <span aria-hidden="true">★★★★★</span>
-            </div>
-            <p>"{review.reviewBody}"</p>
-            <footer>
-              <cite>— {review.author}</cite>
-              <time datetime={review.datePublished}>{new Date(review.datePublished).toLocaleDateString('en-CA', { month: 'long', year: 'numeric' })}</time>
-            </footer>
-          </blockquote>
+  <!-- Areas -->
+  <section class="px-4 md:px-8 py-14 bg-white">
+    <div class="max-w-5xl mx-auto text-center">
+      <h2 class="text-gray-900 mb-3">In-home lessons across Ottawa</h2>
+      <p class="text-gray-600 max-w-2xl mx-auto mb-8">Your coach comes to you. Online lessons work from anywhere.</p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        {areas.map(([href, label]) => (
+          <a href={href} class="bg-gray-50 hover:bg-[#f2f1fa] border border-gray-100 rounded-2xl p-5">
+            <span class="block text-xl font-bold text-gray-900">{label}</span>
+            <span class="text-gray-600 text-base">Lessons in {label} →</span>
+          </a>
         ))}
       </div>
     </div>
   </section>
 
-  <!-- Guides Preview -->
-  <section class="guides-preview" aria-labelledby="guides-heading">
-    <div class="container">
-      <header class="section-header">
-        <h2 id="guides-heading">Free Guides & Tutorials</h2>
-        <p>Step-by-step resources for independent learning</p>
-        <a href="/guides" class="section-link">View All Guides →</a>
-      </header>
-      
-      <div class="guides-grid">
-        <article class="guide-card">
-          <div class="guide-card-icon" aria-hidden="true">📱</div>
-          <h3>FaceTime Setup for Seniors</h3>
-          <p>Step-by-step guide to video calling family on iPad/iPhone.</p>
-          <a href="/guides/how-to-setup-facetime-ipad-seniors" class="guide-card-link">Read Guide →</a>
-        </article>
-        <article class="guide-card">
-          <div class="guide-card-icon" aria-hidden="true">🎣</div>
-          <h3>Spotting Phishing Scams</h3>
-          <p>Learn the 5 red flags and 3-second rule to stay safe online.</p>
-          <a href="/guides/spot-phishing-scams-seniors" class="guide-card-link">Read Guide →</a>
-        </article>
-        <article class="guide-card">
-          <div class="guide-card-icon" aria-hidden="true">♿</div>
-          <h3>iPad Accessibility Settings</h3>
-          <p>Make your iPad easier to see, hear, and use.</p>
-          <a href="/guides/ipad-accessibility-seniors" class="guide-card-link">Read Guide →</a>
-        </article>
-        <article class="guide-card">
-          <div class="guide-card-icon" aria-hidden="true">☁️</div>
-          <h3>Organize Photos with iCloud</h3>
-          <p>Backup, albums, sharing, and finding photos fast.</p>
-          <a href="/guides/icloud-photos-explained" class="guide-card-link">Read Guide →</a>
-        </article>
+  <!-- FAQ -->
+  <section class="px-4 md:px-8 py-14 bg-[#f8f7fc]">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-gray-900 text-center mb-8">Common questions</h2>
+      <div class="space-y-3">
+        {faqs.map((f) => (
+          <details class="bg-white rounded-2xl border border-gray-100 p-5 group">
+            <summary class="cursor-pointer list-none flex justify-between items-center gap-4 text-lg font-semibold text-gray-900">{f.q}<span class="text-coral-dark text-2xl group-open:rotate-45 transition-transform" aria-hidden="true">+</span></summary>
+            <p class="mt-3 text-gray-700">{f.a}</p>
+          </details>
+        ))}
       </div>
     </div>
   </section>
 
-  <!-- Final CTA -->
-  <section class="final-cta" aria-labelledby="final-cta-heading">
-    <div class="container">
-      <CTA 
-        variant="primary"
-        title="Ready to Get Started?"
-        description="Your first 15-minute consultation is free. No pressure, no commitment."
-        buttonText="Book Your Free Consultation"
-      />
+  <!-- Tips -->
+  <section class="px-4 md:px-8 py-14 bg-white">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-gray-900 text-center mb-8">Free tips from your coach</h2>
+      <div class="grid gap-4 md:grid-cols-3">
+        {posts.map(([href, t]) => (
+          <a href={href} class="rounded-2xl border border-gray-100 bg-gray-50 hover:bg-[#f2f1fa] p-6">
+            <h3 class="text-lg font-semibold text-gray-900 mb-3">{t}</h3>
+            <span class="font-semibold text-coral-dark">Read the tip →</span>
+          </a>
+        ))}
+      </div>
+      <p class="text-center mt-8"><a href="/blog" class="font-semibold text-[#6B5CE7] hover:underline">All 12 tips →</a></p>
     </div>
   </section>
 </Base>
-
-<style>
-  .hero {
-    padding: 4rem 0;
-    background: linear-gradient(180deg, var(--color-primary-light, #eff6ff) 0%, white 100%);
-  }
-
-  .hero-inner {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 3rem;
-    align-items: center;
-  }
-
-  @media (min-width: 1024px) {
-    .hero-inner {
-      grid-template-columns: 1fr 1fr;
-    }
-  }
-
-  .hero-content {
-    text-align: center;
-  }
-
-  @media (min-width: 1024px) {
-    .hero-content { text-align: left; }
-  }
-
-  .hero-badge {
-    display: inline-block;
-    padding: 0.5rem 1.25rem;
-    background: var(--color-primary, #1e40af);
-    color: white;
-    border-radius: 9999px;
-    font-size: 0.875rem;
-    font-weight: 600;
-    margin-bottom: 1.5rem;
-  }
-
-  .hero h1 {
-    margin-bottom: 1.5rem;
-    line-height: 1.2;
-  }
-
-  .hero-description {
-    font-size: 1.125rem;
-    color: var(--color-gray-600, #4b5563);
-    margin-bottom: 2rem;
-    max-width: 600px;
-  }
-
-  @media (min-width: 1024px) {
-    .hero-description { margin-left: 0; margin-right: 0; }
-  }
-
-  .hero-stats {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-    margin-top: 3rem;
-    padding-top: 2rem;
-    border-top: 1px solid var(--color-border, #e5e7eb);
-  }
-
-  @media (min-width: 640px) {
-    .hero-stats { grid-template-columns: repeat(4, 1fr); }
-  }
-
-  .stat {
-    text-align: center;
-  }
-
-  .stat-number {
-    display: block;
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: var(--color-primary, #1e40af);
-    line-height: 1;
-  }
-
-  .stat-label {
-    display: block;
-    font-size: 0.875rem;
-    color: var(--color-gray-500, #6b7280);
-    margin-top: 0.25rem;
-  }
-
-  .hero-image {
-    display: none;
-  }
-
-  @media (min-width: 1024px) {
-    .hero-image { display: block; }
-  }
-
-  .hero-illustration {
-    max-width: 400px;
-    margin: 0 auto;
-  }
-
-  .hero-illustration svg {
-    width: 100%;
-    height: auto;
-  }
-
-  .section-header {
-    text-align: center;
-    margin-bottom: 3rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-  }
-
-  .section-header h2 {
-    margin-bottom: 0.5rem;
-  }
-
-  .section-header p {
-    color: var(--color-gray-600, #4b5563);
-    margin: 0;
-  }
-
-  .section-link {
-    font-weight: 600;
-    color: var(--color-primary, #1e40af);
-  }
-
-  .section-link:hover {
-    text-decoration: underline;
-  }
-
-  .services-overview {
-    padding: 5rem 0;
-  }
-
-  .services-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-
-  @media (min-width: 640px) {
-    .services-grid { grid-template-columns: repeat(2, 1fr); }
-  }
-
-  @media (min-width: 1024px) {
-    .services-grid { grid-template-columns: repeat(4, 1fr); }
-  }
-
-  .service-card {
-    background: white;
-    border: 1px solid var(--color-border, #e5e7eb);
-    border-radius: 16px;
-    padding: 2.5rem 2rem;
-    text-align: center;
-    transition: transform 0.2s, box-shadow 0.2s;
-  }
-
-  .service-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-  }
-
-  .service-card-icon {
-    font-size: 3rem;
-    line-height: 1;
-    margin-bottom: 1rem;
-  }
-
-  .service-card-title {
-    margin: 0 0 0.75rem;
-  }
-
-  .service-card-description {
-    color: var(--color-gray-600, #4b5563);
-    margin-bottom: 1.5rem;
-    font-size: 0.9375rem;
-  }
-
-  .service-card-modules {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 1.5rem;
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .service-card-modules li {
-    padding-left: 1.5rem;
-    position: relative;
-    font-size: 0.875rem;
-    color: var(--color-gray-600, #4b5563);
-  }
-
-  .service-card-modules li::before {
-    content: '→';
-    position: absolute;
-    left: 0;
-    color: var(--color-primary, #1e40af);
-  }
-
-  .service-card-link {
-    display: inline-block;
-    font-weight: 600;
-    color: var(--color-primary, #1e40af);
-    font-size: 0.9375rem;
-  }
-
-  .service-card-link:hover {
-    text-decoration: underline;
-  }
-
-  .how-it-works {
-    padding: 5rem 0;
-    background: var(--color-gray-100, #f3f4f6);
-  }
-
-  .process-steps {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-
-  @media (min-width: 768px) {
-    .process-steps { grid-template-columns: repeat(3, 1fr); }
-  }
-
-  .process-step {
-    background: white;
-    border-radius: 16px;
-    padding: 2.5rem;
-    text-align: center;
-    border: 1px solid var(--color-border, #e5e7eb);
-  }
-
-  .process-number {
-    width: 64px;
-    height: 64px;
-    border-radius: 50%;
-    background: var(--color-primary, #1e40af);
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2rem;
-    font-weight: 700;
-    margin: 0 auto 1.5rem;
-  }
-
-  .process-step h3 {
-    margin-bottom: 1rem;
-  }
-
-  .process-step p {
-    color: var(--color-gray-600, #4b5563);
-    margin: 0;
-  }
-
-  .about-preview {
-    padding: 5rem 0;
-  }
-
-  .about-preview-inner {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 3rem;
-    align-items: center;
-  }
-
-  @media (min-width: 1024px) {
-    .about-preview-inner {
-      grid-template-columns: 1fr 1fr;
-    }
-  }
-
-  .about-preview-content {
-    text-align: center;
-  }
-
-  @media (min-width: 1024px) {
-    .about-preview-content { text-align: left; }
-  }
-
-  .about-lead {
-    color: var(--color-primary, #1e40af);
-    font-weight: 600;
-    margin-bottom: 1rem;
-  }
-
-  .about-preview-content p {
-    margin-bottom: 1rem;
-    color: var(--color-gray-600, #4b5563);
-  }
-
-  .about-preview-content p:last-of-type {
-    margin-bottom: 2rem;
-  }
-
-  .btn {
-    display: inline-block;
-    padding: 1rem 2rem;
-    font-weight: 600;
-    border-radius: 9999px;
-    text-decoration: none;
-    transition: all 0.2s;
-  }
-
-  .btn-secondary {
-    background: var(--color-primary, #1e40af);
-    color: white;
-  }
-
-  .btn-secondary:hover {
-    background: var(--color-primary-dark, #1e3a8a);
-    color: white;
-    text-decoration: none;
-  }
-
-  .about-illustration {
-    max-width: 300px;
-    margin: 0 auto;
-  }
-
-  .about-illustration svg {
-    width: 100%;
-    height: auto;
-  }
-
-  .testimonials {
-    padding: 5rem 0;
-  }
-
-  .testimonials-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-
-  @media (min-width: 768px) {
-    .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
-  }
-
-  @media (min-width: 1024px) {
-    .testimonials-grid { grid-template-columns: repeat(3, 1fr); }
-  }
-
-  .testimonial-card {
-    background: white;
-    border: 1px solid var(--color-border, #e5e7eb);
-    border-radius: 16px;
-    padding: 2rem;
-  }
-
-  .stars {
-    font-size: 1.25rem;
-    margin-bottom: 1rem;
-  }
-
-  .testimonial-card p {
-    font-size: 1.0625rem;
-    font-style: italic;
-    margin-bottom: 1.5rem;
-  }
-
-  .testimonial-card footer {
-    display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
-    font-size: 0.875rem;
-    color: var(--color-gray-500, #6b7280);
-  }
-
-  .testimonial-card cite {
-    font-style: normal;
-    font-weight: 600;
-    color: var(--color-text, #1f2937);
-  }
-
-  .guides-preview {
-    padding: 5rem 0;
-    background: var(--color-gray-100, #f3f4f6);
-  }
-
-  .guides-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-
-  @media (min-width: 640px) {
-    .guides-grid { grid-template-columns: repeat(2, 1fr); }
-  }
-
-  @media (min-width: 1024px) {
-    .guides-grid { grid-template-columns: repeat(4, 1fr); }
-  }
-
-  .guide-card {
-    background: white;
-    border: 1px solid var(--color-border, #e5e7eb);
-    border-radius: 16px;
-    padding: 2rem;
-    text-align: center;
-    transition: transform 0.2s, box-shadow 0.2s;
-  }
-
-  .guide-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-  }
-
-  .guide-card-icon {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-  }
-
-  .guide-card h3 {
-    margin: 0 0 0.75rem;
-  }
-
-  .guide-card p {
-    color: var(--color-gray-600, #4b5563);
-    font-size: 0.9375rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .guide-card-link {
-    display: inline-block;
-    font-weight: 600;
-    color: var(--color-primary, #1e40af);
-    font-size: 0.9375rem;
-  }
-
-  .guide-card-link:hover {
-    text-decoration: underline;
-  }
-
-  .final-cta {
-    padding: 5rem 0;
-  }
-</style>
